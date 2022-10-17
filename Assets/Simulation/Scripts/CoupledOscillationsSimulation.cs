@@ -18,8 +18,6 @@ public class CoupledOscillationsSimulation : Simulation
     [SerializeField] private double x2_ref = 2;
     [SerializeField] private float x1_wall = -5;
     [SerializeField] private float x2_wall = 5;
-    // [SerializeField] private double k1 = 10;
-    // [SerializeField] private double k2 = 2;
     [SerializeField] private float k1 = 10;
     [SerializeField] private float k2 = 2;
 
@@ -27,9 +25,7 @@ public class CoupledOscillationsSimulation : Simulation
     private double[] xdot;
     private double[][] constants;
 
-    private float elapsedTime = 0;
-
-    private void Start()
+    private void Awake()
     {
         double x1 = x1_init - x1_ref;
         double x2 = x2_init - x2_ref;
@@ -50,7 +46,7 @@ public class CoupledOscillationsSimulation : Simulation
 
     private void FixedUpdate()
     {
-        elapsedTime += Time.deltaTime;
+        if (paused) { return; }
 
         int numSubsteps = 10;
         double deltaTime = Time.fixedDeltaTime / numSubsteps;
@@ -63,12 +59,7 @@ public class CoupledOscillationsSimulation : Simulation
         UpdateSpringPositions();
     }
 
-    public float GetElapsedTime()
-    {
-        return elapsedTime;
-    }
-
-    private void UpdateMassPositions()
+    public void UpdateMassPositions()
     {
         if (mass1)
         {
@@ -94,7 +85,7 @@ public class CoupledOscillationsSimulation : Simulation
         }
     }
 
-    private void UpdateSpringPositions()
+    public void UpdateSpringPositions()
     {
         float x1 = (float)(x[0] + x1_ref);
         float x2 = (float)(x[1] + x2_ref);
@@ -138,5 +129,27 @@ public class CoupledOscillationsSimulation : Simulation
         xdot[1] = x[3];
         xdot[2] = aNew[0];
         xdot[3] = aNew[1];
+    }
+
+    public void UpdateX(float x1, float x2)
+    {
+        x[0] = x1;
+        x[1] = x2;
+        x[2] = 0;
+        x[3] = 0;
+    }
+
+    public void UpdateXDot()
+    {
+        double[] a = ComputeAccelerations();
+        xdot[0] = x[2];
+        xdot[1] = x[3];
+        xdot[2] = a[0];
+        xdot[3] = a[1];
+    }
+
+    public double[] GetX1X2()
+    {
+        return new double[2] { x[0], x[1] };
     }
 }

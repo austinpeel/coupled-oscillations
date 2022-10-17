@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 3445659556066981870}
   - component: {fileID: 3445659556066981865}
   - component: {fileID: 1500632013737578022}
+  - component: {fileID: 8737679233607626229}
   m_Layer: 5
   m_Name: LanguageToggle
   m_TagString: Untagged
@@ -494,7 +495,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -12, y: 0}
-  m_SizeDelta: {x: 65, y: 50}
+  m_SizeDelta: {x: 65, y: 24}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &7475163388859463191
 MonoBehaviour:
@@ -580,6 +581,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3445659556066981867}
   m_CullTransparentMesh: 1
+--- !u!114 &8737679233607626229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445659556066981867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42205f085adf4349ae4f68d9d960d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverCursor: {fileID: 2800000, guid: e51b8a9ff80cc4ff79a1878bcc7819f8, type: 3}
+  hotspot: {x: 14, y: 6}
 --- !u!1 &3445659556431281525
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +965,7 @@ GameObject:
   - component: {fileID: 5048812946271341917}
   - component: {fileID: 5048812946271341916}
   - component: {fileID: 5048812946271341919}
+  - component: {fileID: 8776511975866885306}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -972,11 +988,11 @@ RectTransform:
   m_Father: {fileID: 3445659555554814202}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 12, y: 0}
-  m_SizeDelta: {x: 60, y: 50}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 52, y: 22}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5048812946271341917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1071,3 +1087,17 @@ MonoBehaviour:
           m_StringArgument: Home
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8776511975866885306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048812946271341905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42205f085adf4349ae4f68d9d960d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverCursor: {fileID: 2800000, guid: e51b8a9ff80cc4ff79a1878bcc7819f8, type: 3}
+  hotspot: {x: 14, y: 6}

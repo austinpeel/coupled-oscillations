@@ -21,6 +21,10 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
     private RectTransform xDots;
     private RectTransform yDots;
 
+    [Header("Normal Modes")]
+    [SerializeField] private Toggle mode1;
+    [SerializeField] private Toggle mode2;
+
     private RectTransform rect;
     private bool mouseIsDown;
 
@@ -47,6 +51,9 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
             xDots = CreateDottedLineContainer("X Dots", 0);
             yDots = CreateDottedLineContainer("Y Dots", 1);
         }
+
+        if (mode1) mode1.isOn = false;
+        if (mode2) mode2.isOn = false;
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -66,6 +73,16 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
             sim.UpdateMassPositions();
             sim.UpdateSpringPositions();
             sim.Resume();
+
+            if (mode1 != null && CheckForMode1(uv, 0.0000001f))
+            {
+                mode1.isOn = true;
+            }
+
+            if (mode2 && CheckForMode2(uv, 0.0000001f))
+            {
+                mode2.isOn = true;
+            }
         }
 
         if (drawDottedLines)
@@ -213,5 +230,16 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
             image.preserveAspect = true;
             image.SetNativeSize();
         }
+    }
+
+    private bool CheckForMode1(Vector2 uv, float tol = 0)
+    {
+        return Mathf.Abs(uv.y - uv.x) <= tol;
+    }
+
+    private bool CheckForMode2(Vector2 uv, float tol = 0)
+    {
+        uv -= 0.5f * Vector2.one;
+        return Mathf.Abs(uv.y + uv.x) <= tol && (uv.x != uv.y);
     }
 }

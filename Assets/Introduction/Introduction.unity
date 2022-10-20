@@ -289,99 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d3cce6ac22e4ee7a8f891b5625c439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &120910562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 120910564}
-  - component: {fileID: 120910563}
-  m_Layer: 0
-  m_Name: Directional Light (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!108 &120910563
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120910562}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &120910564
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120910562}
-  m_LocalRotation: {x: 0.33141357, y: 0.46193978, z: -0.19134171, w: 0.8001032}
-  m_LocalPosition: {x: 0, y: 3, z: -3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 45, y: 60, z: 0}
 --- !u!1 &123024926
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,8 +801,6 @@ MonoBehaviour:
   x2_ref: 2
   x1_wall: -5
   x2_wall: 5
-  k1: 10
-  k2: 5
 --- !u!4 &277578618
 Transform:
   m_ObjectHideFlags: 0
@@ -1026,99 +931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec25de320e0d649b8be57232f152a631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &374024883
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 374024885}
-  - component: {fileID: 374024884}
-  m_Layer: 0
-  m_Name: Directional Light (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!108 &374024884
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374024883}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &374024885
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374024883}
-  m_LocalRotation: {x: 0.33141357, y: -0.46193978, z: 0.19134171, w: 0.8001032}
-  m_LocalPosition: {x: 0, y: 3, z: -3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 45, y: -60, z: 0}
 --- !u!1001 &380112221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1773,7 +1585,7 @@ Transform:
   - {fileID: 1982825949}
   - {fileID: 277578618}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &858040840
 PrefabInstance:
@@ -1789,6 +1601,10 @@ PrefabInstance:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: color.g
       value: 0.5568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: springConstant
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -2365,8 +2181,6 @@ MonoBehaviour:
   x2_ref: 2
   x1_wall: -5
   x2_wall: 5
-  k1: 10
-  k2: 5
 --- !u!4 &1190838172
 Transform:
   m_ObjectHideFlags: 0
@@ -2584,6 +2398,10 @@ PrefabInstance:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: color.g
       value: 0.5568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: springConstant
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -3503,7 +3321,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779904486}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -3685,8 +3503,6 @@ MonoBehaviour:
   x2_ref: 2
   x1_wall: -5
   x2_wall: 5
-  k1: 10
-  k2: 5
 --- !u!4 &1982825949
 Transform:
   m_ObjectHideFlags: 0
@@ -3800,6 +3616,10 @@ PrefabInstance:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: color.g
       value: 0.5568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: springConstant
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -4038,7 +3858,7 @@ Transform:
   - {fileID: 2978235049612958058}
   - {fileID: 333518956153277855}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &826383029935153161
 CanvasGroup:
@@ -4048,7 +3868,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826383029935153164}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -4508,7 +4328,7 @@ MonoBehaviour:
     each of which is connected to a fixed <font-weight="700"><color=#808080>wall</color></font-weight>
     by another <font-weight="700"><color=#83E1B5>spring</color></font-weight>. While
     the oscillations look rather complex at first, the behavior can be understood
-    in terms of only <u>two</u> basic types of motion.'
+    in terms of only <i>two basic types of motion</i>.'
   textFR: Texte...
 --- !u!114 &6396344727223047240
 MonoBehaviour:
@@ -4535,7 +4355,7 @@ MonoBehaviour:
     each of which is connected to a fixed <font-weight="700"><color=#808080>wall</color></font-weight>
     by another <font-weight="700"><color=#83E1B5>spring</color></font-weight>. While
     the oscillations look rather complex at first, the behavior can be understood
-    in terms of only <u>two</u> basic types of motion.'
+    in terms of only <i>two basic types of motion</i>.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}

@@ -154,4 +154,4 @@ MonoBehaviour:
   lineRenderer: {fileID: 4789427375426011073}
   type: 1
   color: {r: 1, g: 0, b: 0, a: 1}
-  springConstant: 1
+  springConstant: 20

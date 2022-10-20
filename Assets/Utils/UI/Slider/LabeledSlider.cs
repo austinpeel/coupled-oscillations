@@ -10,12 +10,17 @@ public class LabeledSlider : MonoBehaviour
 
     private Slider slider;
 
-    private void OnValidate()
+    private void Awake()
     {
-        Debug.Log("Validating");
         var rect = valueTMP.GetComponent<RectTransform>();
         rect.sizeDelta = (30 + 10 * numDecimalDigits) * Vector2.right + rect.sizeDelta.y * Vector2.up;
         rect.anchoredPosition = (40 + 10 * numDecimalDigits) * Vector2.right + rect.anchoredPosition.y * Vector2.up;
+
+        if (valueTMP)
+        {
+            var slider = GetComponent<Slider>();
+            SetValue(slider.value);
+        }
     }
 
     public void SetValue(float value)

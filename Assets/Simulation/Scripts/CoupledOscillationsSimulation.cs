@@ -18,8 +18,6 @@ public class CoupledOscillationsSimulation : Simulation
     [SerializeField] private double x2_ref = 2;
     [SerializeField] private float x1_wall = -5;
     [SerializeField] private float x2_wall = 5;
-    [SerializeField] private float k1 = 10;
-    [SerializeField] private float k2 = 2;
 
     private double[] x;
     private double[] xdot;
@@ -27,14 +25,11 @@ public class CoupledOscillationsSimulation : Simulation
 
     private void Awake()
     {
+        InitializeCouplingConstants();
+        UpdateCouplingConstants();
+
         double x1 = x1_init - x1_ref;
         double x2 = x2_init - x2_ref;
-
-        // TODO check if masses have been assigned
-        constants = new double[2][];
-        constants[0] = new double[2] { -Mathf.Sqrt(k1 / mass1.mass), Mathf.Sqrt(k2 / mass1.mass) };
-        constants[1] = new double[2] { -Mathf.Sqrt(k1 / mass2.mass), Mathf.Sqrt(k2 / mass2.mass) };
-
         x = new double[4] { x1, x2, 0, 0 };
         double[] a = ComputeAccelerations();
         xdot = new double[4] { 0, 0, a[0], a[1] };
@@ -113,6 +108,28 @@ public class CoupledOscillationsSimulation : Simulation
         return a;
     }
 
+    private void InitializeCouplingConstants()
+    {
+        constants = constants = new double[2][];
+        constants[0] = new double[2] { 1, 0 };
+        constants[1] = new double[2] { 0, 1 };
+    }
+
+    private void UpdateCouplingConstants()
+    {
+        // TODO generalize for all 3 springs having different constants
+        if (spring1 && spring2 && mass1 && mass2)
+        {
+            constants[0][0] = -Mathf.Sqrt(spring1.springConstant / mass1.mass);
+            constants[0][1] = Mathf.Sqrt(spring2.springConstant / mass1.mass);
+            constants[1][0] = -Mathf.Sqrt(spring1.springConstant / mass2.mass);
+            constants[1][1] = Mathf.Sqrt(spring2.springConstant / mass2.mass);
+            // constants = new double[2][];
+            // constants[0] = new double[2] { -Mathf.Sqrt(k1 / mass1.mass), Mathf.Sqrt(k2 / mass1.mass) };
+            // constants[1] = new double[2] { -Mathf.Sqrt(k1 / mass2.mass), Mathf.Sqrt(k2 / mass2.mass) };
+        }
+    }
+
     private void TakeLeapfrogStep(double deltaTime)
     {
         // Update positions with current velocities and accelerations
@@ -151,5 +168,43 @@ public class CoupledOscillationsSimulation : Simulation
     public double[] GetX1X2()
     {
         return new double[2] { x[0], x[1] };
+    }
+
+    public void EnterNormalMode(bool first, float amplitude)
+    {
+        float sign = first ? 1 : -1;
+        UpdateX(-amplitude, -sign * amplitude);
+        UpdateXDot();
+        UpdateMassPositions();
+        UpdateSpringPositions();
+    }
+
+    public void SetMass(float value)
+    {
+        if (mass1 && mass2)
+        {
+            mass1.mass = value;
+            mass2.mass = value;
+            UpdateCouplingConstants();
+        }
+    }
+
+    public void SetK1(float value)
+    {
+        if (spring1 && spring3)
+        {
+            spring1.springConstant = value;
+            spring3.springConstant = value;
+            UpdateCouplingConstants();
+        }
+    }
+
+    public void SetK2(float value)
+    {
+        if (spring2)
+        {
+            spring2.springConstant = value;
+            UpdateCouplingConstants();
+        }
     }
 }

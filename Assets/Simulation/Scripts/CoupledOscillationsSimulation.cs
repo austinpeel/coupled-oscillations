@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CoupledOscillationsSimulation : Simulation
 {
-    [Header("Simulation Objects")]
+    [Header("Objects")]
     [SerializeField] private MassiveObject mass1;
     [SerializeField] private MassiveObject mass2;
     [SerializeField] private Spring spring1;
@@ -26,7 +26,6 @@ public class CoupledOscillationsSimulation : Simulation
     private void Awake()
     {
         InitializeCouplingConstants();
-        UpdateCouplingConstants();
 
         double x1 = x1_init - x1_ref;
         double x2 = x2_init - x2_ref;
@@ -56,48 +55,24 @@ public class CoupledOscillationsSimulation : Simulation
 
     public void UpdateMassPositions()
     {
-        if (mass1)
-        {
-            mass1.transform.position = (float)(x1_ref + x[0]) * Vector3.right;
-        }
-
-        if (mass2)
-        {
-            mass2.transform.position = (float)(x2_ref + x[1]) * Vector3.right;
-        }
+        if (mass1) mass1.transform.position = (float)(x1_ref + x[0]) * Vector3.right;
+        if (mass2) mass2.transform.position = (float)(x2_ref + x[1]) * Vector3.right;
     }
 
     private void SetWallPositions()
     {
-        if (wall1)
-        {
-            wall1.position = x1_wall * Vector3.right;
-        }
-
-        if (wall2)
-        {
-            wall2.position = x2_wall * Vector3.right;
-        }
+        if (wall1) wall1.position = x1_wall * Vector3.right;
+        if (wall2) wall2.position = x2_wall * Vector3.right;
     }
 
     public void UpdateSpringPositions()
     {
         float x1 = (float)(x[0] + x1_ref);
         float x2 = (float)(x[1] + x2_ref);
-        if (spring1)
-        {
-            spring1.SetEndpoints(x1_wall * Vector3.right, x1 * Vector3.right);
-        }
 
-        if (spring2)
-        {
-            spring2.SetEndpoints(x1 * Vector3.right, x2 * Vector3.right);
-        }
-
-        if (spring3)
-        {
-            spring3.SetEndpoints(x2 * Vector3.right, x2_wall * Vector3.right);
-        }
+        if (spring1) spring1.SetEndpoints(x1_wall * Vector3.right, x1 * Vector3.right);
+        if (spring2) spring2.SetEndpoints(x1 * Vector3.right, x2 * Vector3.right);
+        if (spring3) spring3.SetEndpoints(x2 * Vector3.right, x2_wall * Vector3.right);
     }
 
     private double[] ComputeAccelerations()
@@ -110,9 +85,10 @@ public class CoupledOscillationsSimulation : Simulation
 
     private void InitializeCouplingConstants()
     {
-        constants = constants = new double[2][];
+        constants = new double[2][];
         constants[0] = new double[2] { 1, 0 };
         constants[1] = new double[2] { 0, 1 };
+        UpdateCouplingConstants();
     }
 
     private void UpdateCouplingConstants()

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NormalModeToggle : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     [SerializeField] private CoupledOscillationsSimulation sim;
     [SerializeField] private ToggleGroup toggleGroup;

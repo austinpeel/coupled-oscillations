@@ -70,9 +70,28 @@ public class CoupledOscillationsSimulation : Simulation
         float x1 = (float)(x[0] + x1_ref);
         float x2 = (float)(x[1] + x2_ref);
 
-        if (spring1) spring1.SetEndpoints(x1_wall * Vector3.right, x1 * Vector3.right);
-        if (spring2) spring2.SetEndpoints(x1 * Vector3.right, x2 * Vector3.right);
-        if (spring3) spring3.SetEndpoints(x2 * Vector3.right, x2_wall * Vector3.right);
+        float offsetWall1 = wall1 ? 0.5f * wall1.localScale.x : 0;
+        float offsetWall2 = wall2 ? 0.5f * wall2.localScale.x : 0;
+        float offsetMass1 = mass1 ? mass1.HalfScale : 0;
+        float offsetMass2 = mass2 ? mass2.HalfScale : 0;
+
+        if (spring1)
+        {
+            spring1.SetEndpoints((x1_wall + offsetWall1) * Vector3.right, (x1 - offsetMass1) * Vector3.right);
+            spring1.Redraw();
+        }
+
+        if (spring2)
+        {
+            spring2.SetEndpoints((x1 + offsetMass1) * Vector3.right, (x2 - offsetMass2) * Vector3.right);
+            spring2.Redraw();
+        }
+
+        if (spring3)
+        {
+            spring3.SetEndpoints((x2 + offsetMass2) * Vector3.right, (x2_wall - offsetWall2) * Vector3.right);
+            spring3.Redraw();
+        }
     }
 
     private double[] ComputeAccelerations()

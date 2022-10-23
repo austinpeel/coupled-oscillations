@@ -42,8 +42,6 @@ public class Spring : MonoBehaviour
     {
         if (lineRenderer == null) { return; }
 
-        Debug.Log("Redrawing");
-
         SetEndpoints(point1, point2);
 
         float width = 0.06f * Mathf.Log10(1 + Mathf.Max(1, springConstant));

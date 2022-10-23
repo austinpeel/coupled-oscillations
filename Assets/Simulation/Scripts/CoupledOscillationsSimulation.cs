@@ -178,8 +178,8 @@ public class CoupledOscillationsSimulation : Simulation
     {
         if (mass1 && mass2)
         {
-            mass1.mass = value;
-            mass2.mass = value;
+            mass1.SetMass(value);
+            mass2.SetMass(value);
             UpdateCouplingConstants();
         }
     }

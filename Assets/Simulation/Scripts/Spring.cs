@@ -6,45 +6,27 @@ public class Spring : MonoBehaviour
 
     public enum Type { Simple, ZigZag, Coiled }
     public Type type = Type.Simple;
+    public int numCoils = 3;
     [SerializeField] private Color color = Color.blue;
     public float springConstant = 1f;  // [N / m]
-    public float radius = 1f;  // m
+    public float radius = 1f;  // [m]
 
     [Header("Endpoints")]
     public Vector3 point1 = Vector3.left;
     public Vector3 point2 = Vector3.right;
 
-    // private void OnValidate()
-    // {
-    //     lineRenderer?.GetComponent<LineRenderer>();
-
-    //     if (lineRenderer == null) { return; }
-
-    //     float width = 0.05f;
-    //     if (type == Type.ZigZag)
-    //     {
-    //         width = 0.2f;
-    //     }
-    //     lineRenderer.startWidth = width;
-    //     lineRenderer.endWidth = width;
-
-    //     lineRenderer.startColor = color;
-    //     lineRenderer.endColor = color;
-    // }
-
-    public void SetEndpoints(Vector3 point1, Vector3 point2)
+    public void SetEndpoints(Vector3 point1, Vector3 point2, bool redraw = true)
     {
         this.point1 = point1;
         this.point2 = point2;
+        if (redraw) Redraw();
     }
 
     public void Redraw()
     {
         if (lineRenderer == null) { return; }
 
-        SetEndpoints(point1, point2);
-
-        float width = 0.06f * Mathf.Log10(1 + Mathf.Max(1, springConstant));
+        float width = 0.1f * Mathf.Log10(1 + Mathf.Max(1, springConstant));
         lineRenderer.startWidth = width;
         lineRenderer.endWidth = width;
 

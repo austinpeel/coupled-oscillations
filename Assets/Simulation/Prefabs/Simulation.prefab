@@ -167,7 +167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: radius
@@ -429,7 +429,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: radius
@@ -815,7 +815,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: radius
@@ -843,7 +843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: springConstant
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.size

@@ -46,6 +46,7 @@ public class CoupledOscillationsSimulation : Simulation
         double deltaTime = Time.fixedDeltaTime / numSubsteps;
         for (int i = 0; i < numSubsteps; i++)
         {
+            // TakeEulerStep(deltaTime);
             TakeLeapfrogStep(deltaTime);
         }
 
@@ -78,19 +79,16 @@ public class CoupledOscillationsSimulation : Simulation
         if (spring1)
         {
             spring1.SetEndpoints((x1_wall + offsetWall1) * Vector3.right, (x1 - offsetMass1) * Vector3.right);
-            spring1.Redraw();
         }
 
         if (spring2)
         {
             spring2.SetEndpoints((x1 + offsetMass1) * Vector3.right, (x2 - offsetMass2) * Vector3.right);
-            spring2.Redraw();
         }
 
         if (spring3)
         {
             spring3.SetEndpoints((x2 + offsetMass2) * Vector3.right, (x2_wall - offsetWall2) * Vector3.right);
-            spring3.Redraw();
         }
     }
 
@@ -115,13 +113,10 @@ public class CoupledOscillationsSimulation : Simulation
         // TODO generalize for all 3 springs having different constants
         if (spring1 && spring2 && mass1 && mass2)
         {
-            constants[0][0] = -Mathf.Sqrt(spring1.springConstant / mass1.mass);
-            constants[0][1] = Mathf.Sqrt(spring2.springConstant / mass1.mass);
-            constants[1][0] = -Mathf.Sqrt(spring1.springConstant / mass2.mass);
-            constants[1][1] = Mathf.Sqrt(spring2.springConstant / mass2.mass);
-            // constants = new double[2][];
-            // constants[0] = new double[2] { -Mathf.Sqrt(k1 / mass1.mass), Mathf.Sqrt(k2 / mass1.mass) };
-            // constants[1] = new double[2] { -Mathf.Sqrt(k1 / mass2.mass), Mathf.Sqrt(k2 / mass2.mass) };
+            constants[0][0] = -spring1.springConstant / mass1.mass;
+            constants[0][1] = spring2.springConstant / mass1.mass;
+            constants[1][0] = -spring1.springConstant / mass2.mass;
+            constants[1][1] = spring2.springConstant / mass2.mass;
         }
     }
 

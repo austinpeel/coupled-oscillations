@@ -166,10 +166,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 9122682873878505769}
     m_Modifications:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
-      propertyPath: type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: radius
       value: 0.2
       objectReference: {fileID: 0}
@@ -195,7 +191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.size
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -203,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: -3
+      value: -4.25
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[2].x
@@ -247,7 +243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.numCornerVertices
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -275,11 +271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.07933316
+      value: 0.07781513
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0.07933316
+      value: 0.07781513
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011074, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Name
@@ -416,10 +412,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 9122682873878505769}
     m_Modifications:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
-      propertyPath: type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: radius
       value: 0.2
       objectReference: {fileID: 0}
@@ -445,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.size
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -453,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 4.5
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[2].x
@@ -497,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.numCornerVertices
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -525,11 +517,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.07933316
+      value: 0.07781513
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0.07933316
+      value: 0.07781513
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011074, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Name
@@ -802,10 +794,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 9122682873878505769}
     m_Modifications:
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
-      propertyPath: type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: radius
       value: 0.2
       objectReference: {fileID: 0}
@@ -818,24 +806,12 @@ PrefabInstance:
       value: 0.5568628
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
-      propertyPath: point1.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
-      propertyPath: point1.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
-      propertyPath: point2.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: springConstant
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.size
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -847,7 +823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 1
+      value: -0.6666666
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[1].y
@@ -899,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.numCornerVertices
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -919,11 +895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.06248356
+      value: 0.04771213
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0.06248356
+      value: 0.04771213
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011074, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Name

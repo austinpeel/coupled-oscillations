@@ -4,13 +4,21 @@ using UnityEngine.UI;
 
 public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
+    [Header("Extent")]
     [SerializeField] private Vector2 xRange = new Vector2(-1, 1);
     [SerializeField] private Vector2 yRange = new Vector2(-1, 1);
+    [SerializeField, Min(0)] float borderWidth = 0;
+    private Vector2 uvMax;
+    private Vector2 uvMin;
 
+    [Header("Properties")]
     [SerializeField] private RectTransform marker;
     [SerializeField] private bool snapToDiagonals;
     [SerializeField] private float snapTolerance = 0.1f;
+
+    [Header("Simulation")]
     [SerializeField] private CoupledOscillationsSimulation sim;
+    [SerializeField] private bool startPaused = true;
 
     [Header("Dotted Line")]
     [SerializeField] private Sprite dot = default;
@@ -37,7 +45,7 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     private void Start()
     {
-        if (sim) sim.Pause();
+        if (startPaused) sim.Pause();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -54,6 +62,10 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
         if (mode1) mode1.isOn = false;
         if (mode2) mode2.isOn = false;
+
+        // Recompute exclusion border in UV space
+        uvMax = ScaledToNormalizedPosition(new Vector2(xRange.y - borderWidth, yRange.y - borderWidth));
+        uvMin = ScaledToNormalizedPosition(new Vector2(xRange.x + borderWidth, yRange.x + borderWidth));
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -62,7 +74,7 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
         eventCamera = null;
         if (sim)
         {
-            Vector2 uv = ScreenToNormalizedPosition(Input.mousePosition, eventCamera);
+            Vector2 uv = ClampUV(ScreenToNormalizedPosition(Input.mousePosition, eventCamera));
             if (snapToDiagonals)
             {
                 uv = SnapToDiagonalUV(uv, snapTolerance);
@@ -99,7 +111,7 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
         if (mouseIsDown)
         {
             // Compute normalized (UV) coordinates of the mouse within this UI element
-            Vector2 uv = ScreenToNormalizedPosition(Input.mousePosition, eventCamera);
+            Vector2 uv = ClampUV(ScreenToNormalizedPosition(Input.mousePosition, eventCamera));
 
             if (marker)
             {
@@ -241,5 +253,13 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         uv -= 0.5f * Vector2.one;
         return Mathf.Abs(uv.y + uv.x) <= tol && (uv.x != uv.y);
+    }
+
+    private Vector2 ClampUV(Vector2 uv)
+    {
+        // Restrict to within borderWidth of the edges
+        uv.x = Mathf.Max(Mathf.Min(uv.x, uvMax.x), uvMin.x);
+        uv.y = Mathf.Max(Mathf.Min(uv.y, uvMax.y), uvMin.y);
+        return uv;
     }
 }

@@ -6,10 +6,10 @@ public class SpringEditor : Editor
 {
     private Spring.Type type = default;
     private int numCoils = 0;
-    private float springConstant = 0;
+    private float k = 0;
     private Vector3 point1 = Vector3.zero;
     private Vector3 point2 = Vector3.zero;
-    private float radius = 1;
+    private float height = 1;
 
     public override void OnInspectorGUI()
     {
@@ -27,10 +27,10 @@ public class SpringEditor : Editor
             numCoils = spring.numCoils;
         }
 
-        if (springConstant != spring.springConstant)
+        if (k != spring.k)
         {
             spring.Redraw();
-            springConstant = spring.springConstant;
+            k = spring.k;
         }
 
         if (point1 != spring.point1 || point2 != spring.point2)
@@ -40,10 +40,10 @@ public class SpringEditor : Editor
             point2 = spring.point2;
         }
 
-        if (radius != spring.radius)
+        if (height != spring.height)
         {
             spring.Redraw();
-            radius = spring.radius;
+            height = spring.height;
         }
 
         DrawDefaultInspector();

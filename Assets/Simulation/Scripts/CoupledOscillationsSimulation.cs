@@ -113,10 +113,10 @@ public class CoupledOscillationsSimulation : Simulation
         // TODO generalize for all 3 springs having different constants
         if (spring1 && spring2 && mass1 && mass2)
         {
-            constants[0][0] = -spring1.springConstant / mass1.mass;
-            constants[0][1] = spring2.springConstant / mass1.mass;
-            constants[1][0] = -spring1.springConstant / mass2.mass;
-            constants[1][1] = spring2.springConstant / mass2.mass;
+            constants[0][0] = -spring1.k / mass1.mass;
+            constants[0][1] = spring2.k / mass1.mass;
+            constants[1][0] = -spring1.k / mass2.mass;
+            constants[1][1] = spring2.k / mass2.mass;
         }
     }
 
@@ -183,8 +183,8 @@ public class CoupledOscillationsSimulation : Simulation
     {
         if (spring1 && spring3)
         {
-            spring1.springConstant = value;
-            spring3.springConstant = value;
+            spring1.k = value;
+            spring3.k = value;
             UpdateCouplingConstants();
         }
     }
@@ -193,8 +193,15 @@ public class CoupledOscillationsSimulation : Simulation
     {
         if (spring2)
         {
-            spring2.springConstant = value;
+            spring2.k = value;
             UpdateCouplingConstants();
         }
+    }
+
+    private double ComputeEnergy()
+    {
+        double KE = mass1.mass * x[2] * x[2] + mass2.mass * x[3] * x[3];
+        double PE = spring1.k * (x[0] * x[0] + x[1] * x[1]) + spring2.k * (x[1] - x[0]) * (x[1] - x[0]);
+        return 0.5 * (KE + PE);
     }
 }

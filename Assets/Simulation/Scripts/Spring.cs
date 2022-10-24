@@ -8,8 +8,8 @@ public class Spring : MonoBehaviour
     public Type type = Type.Simple;
     [Min(0)] public int numCoils = 3;
     [SerializeField] private Color color = Color.blue;
-    public float springConstant = 1f;  // [N / m]
-    public float radius = 1f;  // [m]
+    public float k = 1f;  // [N / m]
+    public float height = 1f;  // [m]
 
     [Header("Endpoints")]
     public Vector3 point1 = Vector3.left;
@@ -26,7 +26,7 @@ public class Spring : MonoBehaviour
     {
         if (lineRenderer == null) { return; }
 
-        float width = 0.1f * Mathf.Log10(1 + Mathf.Max(1, springConstant));
+        float width = 0.1f * Mathf.Log10(1 + Mathf.Max(1, k));
         lineRenderer.startWidth = width;
         lineRenderer.endWidth = width;
 
@@ -52,7 +52,7 @@ public class Spring : MonoBehaviour
                 for (int i = 0; i < numSegments; i++)
                 {
                     float sign = (i % 2) == 0 ? 1 : -1;
-                    positions[2 + i] = point1 + (1.5f + i) * delta * xHat + sign * radius * yHat;
+                    positions[2 + i] = point1 + (1.5f + i) * delta * xHat + sign * height * yHat;
                 }
                 positions[numPositions - 2] = point2 - delta * xHat;
                 positions[numPositions - 1] = point2;

@@ -6,12 +6,13 @@ public class UIController : MonoBehaviour
     [SerializeField] private CoupledOscillationsSimulation sim;
     [SerializeField] private ToggleGroup toggleGroup;
     [SerializeField] private float amplitude = 1f;
+    [SerializeField, Min(0)] private int numDecimalDigits = 1;
 
     private int currentMode = 1;
 
     private void Start()
     {
-        if (sim) sim.EnterNormalMode(true, amplitude);
+        if (toggleGroup && sim) sim.EnterNormalMode(true, amplitude);
     }
 
     public void HandleModeToggle()
@@ -34,8 +35,8 @@ public class UIController : MonoBehaviour
     {
         if (sim)
         {
-            sim.SetMass(mass);
-            sim.EnterNormalMode(currentMode == 1, amplitude);
+            sim.SetMass(RoundToDecimalPlace(mass, numDecimalDigits));
+            if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
     }
 
@@ -43,8 +44,8 @@ public class UIController : MonoBehaviour
     {
         if (sim)
         {
-            sim.SetK1(k1);
-            sim.EnterNormalMode(currentMode == 1, amplitude);
+            sim.SetK1(RoundToDecimalPlace(k1, numDecimalDigits));
+            if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
     }
 
@@ -52,8 +53,14 @@ public class UIController : MonoBehaviour
     {
         if (sim)
         {
-            sim.SetK2(k2);
-            sim.EnterNormalMode(currentMode == 1, amplitude);
+            sim.SetK2(RoundToDecimalPlace(k2, numDecimalDigits));
+            if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
+    }
+
+    private float RoundToDecimalPlace(float value, int decimalPlace)
+    {
+        float factor = Mathf.Pow(10f, decimalPlace);
+        return Mathf.Round(factor * value) / factor;
     }
 }

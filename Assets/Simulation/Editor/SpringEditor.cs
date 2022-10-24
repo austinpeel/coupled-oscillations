@@ -5,10 +5,11 @@ using UnityEditor;
 public class SpringEditor : Editor
 {
     private Spring.Type type = default;
+    private int numCoils = 0;
     private float springConstant = 0;
-    private Vector3 point1;
-    private Vector3 point2;
-    private float radius;
+    private Vector3 point1 = Vector3.zero;
+    private Vector3 point2 = Vector3.zero;
+    private float radius = 1;
 
     public override void OnInspectorGUI()
     {
@@ -18,6 +19,12 @@ public class SpringEditor : Editor
         {
             spring.Redraw();
             type = spring.type;
+        }
+
+        if (numCoils != spring.numCoils)
+        {
+            spring.Redraw();
+            numCoils = spring.numCoils;
         }
 
         if (springConstant != spring.springConstant)

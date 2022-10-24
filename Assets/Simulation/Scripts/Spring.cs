@@ -6,7 +6,7 @@ public class Spring : MonoBehaviour
 
     public enum Type { Simple, ZigZag, Coiled }
     public Type type = Type.Simple;
-    public int numCoils = 3;
+    [Min(0)] public int numCoils = 3;
     [SerializeField] private Color color = Color.blue;
     public float springConstant = 1f;  // [N / m]
     public float radius = 1f;  // [m]
@@ -38,21 +38,24 @@ public class Spring : MonoBehaviour
                 lineRenderer.SetPositions(new Vector3[] { point1, point2 });
                 break;
             case Type.ZigZag:
-                lineRenderer.positionCount = 8;
+                int numPositions = 4 + 2 * numCoils;
+                int numSegments = numPositions - 2;
+                lineRenderer.positionCount = numPositions;
                 lineRenderer.numCornerVertices = 5;
                 Vector3 displacement = point2 - point1;
                 Vector3 xHat = displacement.normalized;
                 Vector3 yHat = Vector3.Cross(Vector3.Cross(xHat, Vector3.up), xHat);
-                float delta = displacement.magnitude / 6;
-                Vector3[] positions = new Vector3[8];
+                float delta = displacement.magnitude / numSegments;
+                Vector3[] positions = new Vector3[numPositions];
                 positions[0] = point1;
                 positions[1] = point1 + 1 * delta * xHat;
-                positions[2] = point1 + 1.5f * delta * xHat + radius * yHat;
-                positions[3] = point1 + 2.5f * delta * xHat - radius * yHat;
-                positions[4] = point1 + 3.5f * delta * xHat + radius * yHat;
-                positions[5] = point1 + 4.5f * delta * xHat - radius * yHat;
-                positions[6] = point1 + 5 * delta * xHat;
-                positions[7] = point2;
+                for (int i = 0; i < numSegments; i++)
+                {
+                    float sign = (i % 2) == 0 ? 1 : -1;
+                    positions[2 + i] = point1 + (1.5f + i) * delta * xHat + sign * radius * yHat;
+                }
+                positions[numPositions - 2] = point2 - delta * xHat;
+                positions[numPositions - 1] = point2;
                 lineRenderer.SetPositions(positions);
                 break;
             default:

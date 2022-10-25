@@ -725,6 +725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Simulation
       objectReference: {fileID: 0}
+    - target: {fileID: 9122682873878505768, guid: a58d7b188b8884a08bdadf45d2033d6d, type: 3}
+      propertyPath: x1Init
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 9122682873878505769, guid: a58d7b188b8884a08bdadf45d2033d6d, type: 3}
       propertyPath: m_RootOrder
       value: 3

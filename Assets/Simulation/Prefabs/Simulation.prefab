@@ -152,12 +152,15 @@ MonoBehaviour:
   spring3: {fileID: 4390219567374788796}
   wall1: {fileID: 7587982382403144206}
   wall2: {fileID: 7587982383429846494}
-  x1_init: -2
-  x2_init: 2
-  x1_ref: -2
-  x2_ref: 2
-  x1_wall: -5
-  x2_wall: 5
+  x1Init: -3
+  x2Init: 2
+  x1Ref: -2
+  x2Ref: 2
+  x1Wall: -5
+  x2Wall: 5
+  massesAreDraggable: 0
+  x1Range: {x: -1, y: 0}
+  x2Range: {x: 1, y: 0}
 --- !u!1001 &9122682872305074732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -358,6 +361,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9122682873878505769}
     m_Modifications:
+    - target: {fileID: 4690874853916341264, guid: bff09c5d71c2b4a45a91b5c7f212b6e5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4690874853916341267, guid: bff09c5d71c2b4a45a91b5c7f212b6e5, type: 3}
       propertyPath: m_Name
       value: Mass 1
@@ -674,6 +681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9122682873878505769}
     m_Modifications:
+    - target: {fileID: 4690874853916341264, guid: bff09c5d71c2b4a45a91b5c7f212b6e5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4690874853916341267, guid: bff09c5d71c2b4a45a91b5c7f212b6e5, type: 3}
       propertyPath: m_Name
       value: Mass 2

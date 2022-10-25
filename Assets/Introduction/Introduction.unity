@@ -887,12 +887,15 @@ MonoBehaviour:
   spring3: {fileID: 380112223}
   wall1: {fileID: 244534279}
   wall2: {fileID: 1859414152}
-  x1_init: -1
-  x2_init: 1
-  x1_ref: -2
-  x2_ref: 2
-  x1_wall: -5
-  x2_wall: 5
+  x1Init: -3
+  x2Init: 3
+  x1Ref: -2
+  x2Ref: 2
+  x1Wall: -5
+  x2Wall: 5
+  massesAreDraggable: 0
+  x1Range: {x: -1, y: 0}
+  x2Range: {x: 1, y: 0}
 --- !u!4 &277578618
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,7 +1458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465849216}
   m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2644,12 +2647,15 @@ MonoBehaviour:
   spring3: {fileID: 2023487206}
   wall1: {fileID: 800987601}
   wall2: {fileID: 2063350521}
-  x1_init: -3.5
-  x2_init: 1.5
-  x1_ref: -2
-  x2_ref: 2
-  x1_wall: -5
-  x2_wall: 5
+  x1Init: -3
+  x2Init: 2
+  x1Ref: -2
+  x2Ref: 2
+  x1Wall: -5
+  x2Wall: 5
+  massesAreDraggable: 0
+  x1Range: {x: -1, y: 0}
+  x2Range: {x: 1, y: 0}
 --- !u!4 &1190838172
 Transform:
   m_ObjectHideFlags: 0
@@ -4097,12 +4103,15 @@ MonoBehaviour:
   spring3: {fileID: 656928925}
   wall1: {fileID: 244536344}
   wall2: {fileID: 606913889}
-  x1_init: -1
-  x2_init: 3
-  x1_ref: -2
-  x2_ref: 2
-  x1_wall: -5
-  x2_wall: 5
+  x1Init: -3
+  x2Init: 1
+  x1Ref: -2
+  x2Ref: 2
+  x1Wall: -5
+  x2Wall: 5
+  massesAreDraggable: 0
+  x1Range: {x: -1, y: 0}
+  x2Range: {x: 1, y: 0}
 --- !u!4 &1982825949
 Transform:
   m_ObjectHideFlags: 0

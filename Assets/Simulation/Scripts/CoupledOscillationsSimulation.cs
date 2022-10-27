@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class CoupledOscillationsSimulation : Simulation
@@ -28,6 +29,9 @@ public class CoupledOscillationsSimulation : Simulation
     private Camera mainCamera;
     private Transform dragMass = null;
     private Vector3 dragOffset = Vector3.zero;
+
+    [Header("Buttons")]
+    [SerializeField] private TextMeshProUGUI playButton;
 
     private double[] x;
     private double[] xdot;
@@ -110,7 +114,6 @@ public class CoupledOscillationsSimulation : Simulation
 
             dragMass = null;
             dragOffset = Vector3.zero;
-            Resume();
         }
     }
 
@@ -252,6 +255,21 @@ public class CoupledOscillationsSimulation : Simulation
         return new float[2] { (float)(x[1] + x2Ref) + offsetMass2, x2Wall - offsetWall2 };
     }
 
+    public float GetK1()
+    {
+        return spring1.k;
+    }
+
+    public float GetK2()
+    {
+        return spring2.k;
+    }
+
+    public float GetK3()
+    {
+        return spring3.k;
+    }
+
     public void EnterNormalMode(bool first, float amplitude)
     {
         float sign = first ? 1 : -1;
@@ -313,5 +331,17 @@ public class CoupledOscillationsSimulation : Simulation
         UpdateSpringPositions();
 
         if (pause) Pause();
+    }
+
+    public override void Pause()
+    {
+        base.Pause();
+        if (playButton) playButton.text = "Play";
+    }
+
+    public override void Resume()
+    {
+        base.Resume();
+        if (playButton) playButton.text = "Pause";
     }
 }

@@ -156,11 +156,12 @@ MonoBehaviour:
   x2Init: 2
   x1Ref: -2
   x2Ref: 2
-  x1Wall: -5
-  x2Wall: 5
+  x1Wall: -5.6
+  x2Wall: 5.6
   massesAreDraggable: 0
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
+  playButton: {fileID: 0}
 --- !u!1001 &9122682872305074732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -625,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1718029228441028322, guid: c4baa23ec3a194ecab8a24178f9f00fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -5.6
       objectReference: {fileID: 0}
     - target: {fileID: 1718029228441028322, guid: c4baa23ec3a194ecab8a24178f9f00fc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -764,7 +765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1718029228441028322, guid: c4baa23ec3a194ecab8a24178f9f00fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: 1718029228441028322, guid: c4baa23ec3a194ecab8a24178f9f00fc, type: 3}
       propertyPath: m_LocalPosition.y

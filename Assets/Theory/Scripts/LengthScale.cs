@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LengthScale : MonoBehaviour
@@ -17,6 +15,8 @@ public class LengthScale : MonoBehaviour
     [SerializeField, Range(0.01f, 0.2f)] private float thickness = 0.1f;
     [SerializeField] private float height = 0.4f;
     [SerializeField] private int sortingOrder = 0;
+    [SerializeField] private bool leftEdgeIgnoreThickness = false;
+    [SerializeField] private bool rightEdgeIgnoreThickness = false;
 
     private void OnValidate()
     {
@@ -45,10 +45,15 @@ public class LengthScale : MonoBehaviour
             Vector3 position = leftEdge.localPosition;
             position.x = xPositionLeft;
             leftEdge.localPosition = position;
-            Vector3 scale = Vector3.one;
-            scale.x = thickness;
-            scale.y = height;
-            leftEdge.localScale = scale;
+
+            if (!leftEdgeIgnoreThickness)
+            {
+                Vector3 scale = Vector3.one;
+                scale.x = thickness;
+                scale.y = height;
+                leftEdge.localScale = scale;
+            }
+
             var sr = leftEdge.GetComponent<SpriteRenderer>();
             sr.color = color;
             sr.sortingOrder = sortingOrder;
@@ -59,10 +64,15 @@ public class LengthScale : MonoBehaviour
             Vector3 position = rightEdge.localPosition;
             position.x = xPositionRight;
             rightEdge.localPosition = position;
-            Vector3 scale = Vector3.one;
-            scale.x = thickness;
-            scale.y = height;
-            rightEdge.localScale = scale;
+
+            if (!rightEdgeIgnoreThickness)
+            {
+                Vector3 scale = Vector3.one;
+                scale.x = thickness;
+                scale.y = height;
+                rightEdge.localScale = scale;
+            }
+
             var sr = rightEdge.GetComponent<SpriteRenderer>();
             sr.color = color;
             sr.sortingOrder = sortingOrder;
@@ -96,5 +106,15 @@ public class LengthScale : MonoBehaviour
         xPositionLeft = values[0];
         xPositionRight = values[1];
         if (redraw) Redraw();
+    }
+
+    public float GetXPositionLeft()
+    {
+        return xPositionLeft;
+    }
+
+    public float GetXPositionRight()
+    {
+        return xPositionRight;
     }
 }

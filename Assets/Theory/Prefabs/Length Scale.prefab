@@ -220,6 +220,8 @@ MonoBehaviour:
   thickness: 0.05
   height: 0.4
   sortingOrder: 0
+  leftEdgeIgnoreThickness: 0
+  rightEdgeIgnoreThickness: 0
 --- !u!1 &7667794366369752116
 GameObject:
   m_ObjectHideFlags: 0

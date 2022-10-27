@@ -18,10 +18,10 @@ public class TheoryController : MonoBehaviour
 
     [Header("Vectors")]
     [SerializeField] private float scaleFactor = 1;
-    [SerializeField] private Vector force11;  // Force of spring 1 on mass 1
-    [SerializeField] private Vector force21;  // Force of spring 2 on mass 1
-    [SerializeField] private Vector force22;
-    [SerializeField] private Vector force32;
+    [SerializeField] private Arrow force11;  // Force of spring 1 on mass 1
+    [SerializeField] private Arrow force21;  // Force of spring 2 on mass 1
+    [SerializeField] private Arrow force22;
+    [SerializeField] private Arrow force32;
 
     private void Start()
     {
@@ -78,8 +78,7 @@ public class TheoryController : MonoBehaviour
             position.x = endpoint;
             force11.transform.position = position;
             float force = -scaleFactor * sim.GetK1() * (endpoint - lsLeftRef.GetXPositionRight());
-            force11.SetPositions(Vector3.zero, force * Vector3.right);
-            force11.Redraw();
+            force11.SetComponents(force * Vector3.right);
         }
 
         if (force21)
@@ -90,8 +89,7 @@ public class TheoryController : MonoBehaviour
             force21.transform.position = position;
             float delta = (endpoints[1] - endpoints[0]) - (lsCenterRef.GetXPositionRight() - lsCenterRef.GetXPositionLeft());
             float force = scaleFactor * sim.GetK2() * delta;
-            force21.SetPositions(Vector3.zero, force * Vector3.right);
-            force21.Redraw();
+            force21.SetComponents(force * Vector3.right);
         }
 
         if (force22)
@@ -102,8 +100,7 @@ public class TheoryController : MonoBehaviour
             force22.transform.position = position;
             float delta = (endpoints[1] - endpoints[0]) - (lsCenterRef.GetXPositionRight() - lsCenterRef.GetXPositionLeft());
             float force = -scaleFactor * sim.GetK2() * delta;
-            force22.SetPositions(Vector3.zero, force * Vector3.right);
-            force22.Redraw();
+            force22.SetComponents(force * Vector3.right);
         }
 
         if (force32)
@@ -113,8 +110,7 @@ public class TheoryController : MonoBehaviour
             position.x = endpoint;
             force32.transform.position = position;
             float force = -scaleFactor * sim.GetK3() * (endpoint - lsRightRef.GetXPositionLeft());
-            force32.SetPositions(Vector3.zero, force * Vector3.right);
-            force32.Redraw();
+            force32.SetComponents(force * Vector3.right);
         }
     }
 }

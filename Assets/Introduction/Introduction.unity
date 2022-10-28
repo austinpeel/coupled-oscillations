@@ -896,6 +896,7 @@ MonoBehaviour:
   massesAreDraggable: 0
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
+  playButton: {fileID: 0}
 --- !u!4 &277578618
 Transform:
   m_ObjectHideFlags: 0
@@ -1457,13 +1458,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465849216}
-  m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 0, z: -40}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 5, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &465849220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,6 +2657,7 @@ MonoBehaviour:
   massesAreDraggable: 0
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
+  playButton: {fileID: 0}
 --- !u!4 &1190838172
 Transform:
   m_ObjectHideFlags: 0
@@ -4112,6 +4114,7 @@ MonoBehaviour:
   massesAreDraggable: 0
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
+  playButton: {fileID: 0}
 --- !u!4 &1982825949
 Transform:
   m_ObjectHideFlags: 0
@@ -4850,6 +4853,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3445659556848988076, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4510729019409042621, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: m_text
       value: Introduction
@@ -4857,6 +4864,14 @@ PrefabInstance:
     - target: {fileID: 5048812945914758874, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812945914758876, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341916, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7568818136417489784, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: textEN

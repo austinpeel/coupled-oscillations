@@ -31,7 +31,7 @@ public class CoupledOscillationsSimulation : Simulation
     private Vector3 dragOffset = Vector3.zero;
 
     [Header("Buttons")]
-    [SerializeField] private TextMeshProUGUI playButton;
+    [SerializeField] private PlayButton playButton;
 
     private double[] x;
     private double[] xdot;
@@ -336,12 +336,12 @@ public class CoupledOscillationsSimulation : Simulation
     public override void Pause()
     {
         base.Pause();
-        if (playButton) playButton.text = "Play";
+        if (playButton) playButton.Pause();
     }
 
     public override void Resume()
     {
         base.Resume();
-        if (playButton) playButton.text = "Pause";
+        if (playButton) playButton.Play();
     }
 }

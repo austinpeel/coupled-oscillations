@@ -12,7 +12,6 @@ namespace Utils
 
         private void OnEnable()
         {
-            Debug.Log("CameraController > OnEnable");
             StopAllCoroutines();
             if (state)
             {

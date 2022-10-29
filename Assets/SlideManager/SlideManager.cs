@@ -14,6 +14,7 @@ public class SlideManager : MonoBehaviour
     [Header("Navigation")]
     [SerializeField] private Transform navigation;
     [SerializeField] private bool clickableBubbles = true;
+    [SerializeField] private bool useProgressBar;
 
     [Header("Slide Transitions")]
     [SerializeField, Min(0)] private float fadeInTime = 0.3f;
@@ -102,11 +103,19 @@ public class SlideManager : MonoBehaviour
             return;
         }
 
-        // Create navigation bubbles and set the correct one active
+        // Create navigation bubbles (or progress bar) and set the correct one active
         if (navigation.TryGetComponent(out Navigation nav))
         {
-            nav.SetBubbleClickability(clickableBubbles);
-            nav.GenerateBubbles(slideContainer.childCount);
+            if (useProgressBar)
+            {
+                nav.useProgressBar = true;
+                nav.SetNumSlides(slideContainer.childCount);
+            }
+            else
+            {
+                nav.SetBubbleClickability(clickableBubbles);
+                nav.GenerateBubbles(slideContainer.childCount);
+            }
             nav.SetCurrentSlideIndex(currentSlideIndex);
             nav.ChangeSlide(currentSlideIndex, false);
         }

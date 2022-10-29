@@ -19,6 +19,7 @@ public class CoupledOscillationsSimulation : Simulation
     [SerializeField] private double x2Ref = 2;
     [SerializeField] private float x1Wall = -5;
     [SerializeField] private float x2Wall = 5;
+    [SerializeField] private SimulationState simState;
 
     [Header("Interactivity")]
     [SerializeField] private bool massesAreDraggable;
@@ -56,6 +57,32 @@ public class CoupledOscillationsSimulation : Simulation
         plane = new Plane(Vector3.forward, Vector3.zero);
         mainCamera = Camera.main;
         massLayerMask = LayerMask.GetMask("Masses");
+    }
+
+    private void OnEnable()
+    {
+        // Use ICs from simulation state if available
+        if (simState)
+        {
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] = simState.x[i];
+                xdot[i] = simState.xdot[i];
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        // Pass current state to sims in other scenes
+        if (simState)
+        {
+            for (int i = 0; i < x.Length; i++)
+            {
+                simState.x[i] = x[i];
+                simState.xdot[i] = xdot[i];
+            }
+        }
     }
 
     // Handle mouse clicks and dragging masses

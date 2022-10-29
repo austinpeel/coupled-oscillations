@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Navigation : MonoBehaviour
@@ -15,8 +16,19 @@ public class Navigation : MonoBehaviour
     [SerializeField] private Color futureColor = Color.white;
     [SerializeField] private bool bubblesAreClickable = false;
 
+    [Header("Progress Bar")]
+    [SerializeField] private RectTransform progressBarBackground = default;
+    [SerializeField] private RectTransform progressBarFill = default;
+    [HideInInspector] public bool useProgressBar;
+    private int numSlides;
+
     private RectTransform bubbles;
     private int currentSlideIndex;
+
+    public void SetNumSlides(int numSlides)
+    {
+        this.numSlides = numSlides;
+    }
 
     public void GenerateBubbles(int numSlides)
     {
@@ -39,6 +51,8 @@ public class Navigation : MonoBehaviour
             bubbleImage.color -= new Color(0, 0, 0, bubbleImage.color.a);
             bubbleImage.preserveAspect = true;
         }
+
+        SetNumSlides(numSlides);
     }
 
     private void SetActiveBubble(int slideIndex)
@@ -70,6 +84,37 @@ public class Navigation : MonoBehaviour
         }
     }
 
+    public void FillProgressBar(int slideIndex)
+    {
+        if (progressBarBackground && progressBarFill)
+        {
+            StopAllCoroutines();
+            StartCoroutine(AnimateFill(slideIndex / (numSlides - 1f), 0.3f));
+        }
+    }
+
+    private IEnumerator AnimateFill(float targetFraction, float lerpTime = 0.5f)
+    {
+        float currentFraction = progressBarFill.sizeDelta.x / progressBarBackground.rect.size.x;
+
+        float time = 0;
+        Vector2 sizeDelta = progressBarFill.sizeDelta;
+
+        while (time < lerpTime)
+        {
+            time += Time.deltaTime;
+            float t = time / lerpTime;
+            t = t * t * (3f - 2f * t);
+            float fraction = Mathf.Lerp(currentFraction, targetFraction, t);
+            sizeDelta.x = fraction * progressBarBackground.rect.size.x;
+            progressBarFill.sizeDelta = sizeDelta;
+            yield return null;
+        }
+
+        sizeDelta.x = targetFraction * progressBarBackground.rect.size.x;
+        progressBarFill.sizeDelta = sizeDelta;
+    }
+
     private void SetButtonVisibility()
     {
         if (backButton == null || forwardButton == null)
@@ -81,9 +126,9 @@ public class Navigation : MonoBehaviour
         if (currentSlideIndex == 0)
         {
             backButton.SetActive(false);
-            forwardButton.SetActive(bubbles.childCount > 1);
+            forwardButton.SetActive(numSlides > 1);
         }
-        else if (currentSlideIndex == bubbles.childCount - 1)
+        else if (currentSlideIndex == numSlides - 1)
         {
             backButton.SetActive(true);
             forwardButton.SetActive(false);
@@ -97,7 +142,15 @@ public class Navigation : MonoBehaviour
 
     public void ChangeSlide(int slideIndex, bool sendMessage = true)
     {
-        SetActiveBubble(slideIndex);
+        if (useProgressBar)
+        {
+            FillProgressBar(slideIndex);
+        }
+        else
+        {
+            SetActiveBubble(slideIndex);
+        }
+
         SetButtonVisibility();
         if (sendMessage)
         {

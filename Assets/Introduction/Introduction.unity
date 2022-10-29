@@ -1648,8 +1648,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: What role do you think the <i>amplitudes</i> of the normal modes play?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
-  m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b0a43fe65966e4830b14e32656a09a81, type: 2}
+  m_sharedMaterial: {fileID: 2994796600930771256, guid: b0a43fe65966e4830b14e32656a09a81, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2044,24 +2044,84 @@ PrefabInstance:
       value: 0.5568628
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: numCoils
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: springConstant
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[1].x
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[2].x
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[2].y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[3].x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[3].y
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[4].x
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[4].y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[5].x
+      value: -0.099999964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[5].y
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[6].x
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[7].x
+      value: 0.30000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[8].x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[8].y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[9].x
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[9].y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[10].x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[11].x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -2627,8 +2687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDelay: 5
-  pulseRate: 1
-  scalePercentage: 0.15
+  pulseRate: 1.5
+  scalePercentage: 0.12
 --- !u!1 &1106677618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,8 +2740,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textEN: "In general, the system will not be exactly in one or the other of the
-    normal modes, but instead a combination of the two. That\u2019s what gives rise
-    to the more complex behavior you see here."
+    normal modes, but instead a <i>combination of the two</i>. That\u2019s what gives
+    rise to the more complex behavior you see here."
   textFR: Texte...
 --- !u!114 &1106677621
 MonoBehaviour:
@@ -2704,8 +2764,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "In general, the system will not be exactly in one or the other of the
-    normal modes, but instead a combination of the two. That\u2019s what gives rise
-    to the more complex behavior you see here."
+    normal modes, but instead a <i>combination of the two</i>. That\u2019s what gives
+    rise to the more complex behavior you see here."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -3149,24 +3209,84 @@ PrefabInstance:
       value: 0.5568628
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: numCoils
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: springConstant
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[1].x
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[2].x
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[2].y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[3].x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[3].y
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[4].x
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[4].y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[5].x
+      value: -0.099999964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[5].y
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[6].x
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[7].x
+      value: 0.30000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[8].x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[8].y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[9].x
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[9].y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[10].x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[11].x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -3321,8 +3441,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: What can you say about the frequencies of the two modes? Are they the same?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
-  m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b0a43fe65966e4830b14e32656a09a81, type: 2}
+  m_sharedMaterial: {fileID: 2994796600930771256, guid: b0a43fe65966e4830b14e32656a09a81, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4512,24 +4632,84 @@ PrefabInstance:
       value: 0.5568628
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: numCoils
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011072, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: springConstant
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[1].x
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[2].x
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[2].y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[3].x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[3].y
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[4].x
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[4].y
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[5].x
+      value: -0.099999964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Positions.Array.data[5].y
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[6].x
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[7].x
+      value: 0.30000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[8].x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[8].y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[9].x
+      value: 0.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[9].y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[10].x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
+      propertyPath: m_Positions.Array.data[11].x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789427375426011073, guid: 23d1a896052994527ae67a7559f25216, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
@@ -5147,6 +5327,38 @@ PrefabInstance:
     - target: {fileID: 5048812946271341916, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 4142d516b6c8d45ab98b9075babf832f, type: 2}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetState
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CameraState, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048812946271341919, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7568818136417489784, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: textEN

@@ -89,7 +89,7 @@ public class Navigation : MonoBehaviour
         if (progressBarBackground && progressBarFill)
         {
             StopAllCoroutines();
-            StartCoroutine(AnimateFill(slideIndex / (numSlides - 1f), 0.3f));
+            StartCoroutine(AnimateFill((slideIndex + 1f) / numSlides));
         }
     }
 

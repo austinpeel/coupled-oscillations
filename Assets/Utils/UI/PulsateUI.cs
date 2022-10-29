@@ -16,14 +16,12 @@ public class PulsateUI : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Right arrow clicked");
         doNotPulsate = true;
         rect.localScale = originalScale;
     }
 
     private void OnEnable()
     {
-        Debug.Log("PulsateUI > OnEnable");
         rect = GetComponent<RectTransform>();
         originalScale = rect.localScale;
     }

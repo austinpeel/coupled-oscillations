@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 6630728238506993889, guid: 9ee20eafb5f094ea6b6424bb51947619, type: 3}
       propertyPath: textEN
       value: Find the two normal modes by setting initial conditions. Understand
-        why the trace out special curves in (x1-x2) space.
+        why the trace out special curves in (x1, x2) space.
       objectReference: {fileID: 0}
     - target: {fileID: 6630728238529657200, guid: 9ee20eafb5f094ea6b6424bb51947619, type: 3}
       propertyPath: m_Pivot.x

@@ -59,7 +59,7 @@ public class Timer : MonoBehaviour
     {
         if (timeDisplay)
         {
-            timeDisplay.text = time.ToString("0.00");
+            timeDisplay.text = time.ToString("00.00");
         }
     }
 }

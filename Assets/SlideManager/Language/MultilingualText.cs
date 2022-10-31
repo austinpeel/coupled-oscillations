@@ -10,6 +10,10 @@ public class MultilingualText : MonoBehaviour
     [TextArea(3, 10)] public string textEN;
     [TextArea(3, 10)] public string textFR;
 
+    [Header("Language-Specific Transforms")]
+    public RectTransform transformsEN;
+    public RectTransform transformsFR;
+
     private string currentTextEN;
     private string currentTextFR;
 
@@ -58,9 +62,13 @@ public class MultilingualText : MonoBehaviour
         {
             case "EN":
                 tmp.text = textEN;
+                if (transformsEN) transformsEN.gameObject.SetActive(true);
+                if (transformsFR) transformsFR.gameObject.SetActive(false);
                 break;
             case "FR":
                 tmp.text = textFR;
+                if (transformsEN) transformsEN.gameObject.SetActive(false);
+                if (transformsFR) transformsFR.gameObject.SetActive(true);
                 break;
         }
     }

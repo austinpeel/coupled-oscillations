@@ -33,6 +33,10 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
     [SerializeField] private Toggle mode1;
     [SerializeField] private Toggle mode2;
 
+    [Header("Diagonals")]
+    [SerializeField] private RectTransform diagonalMode1;
+    [SerializeField] private RectTransform diagonalMode2;
+
     private RectTransform rect;
     private bool mouseIsDown;
 
@@ -63,6 +67,9 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
         if (mode1) mode1.isOn = false;
         if (mode2) mode2.isOn = false;
 
+        if (diagonalMode1) diagonalMode1.gameObject.SetActive(false);
+        if (diagonalMode2) diagonalMode2.gameObject.SetActive(false);
+
         // Recompute exclusion border in UV space
         uvMax = ScaledToNormalizedPosition(new Vector2(xRange.y - borderWidth, yRange.y - borderWidth));
         uvMin = ScaledToNormalizedPosition(new Vector2(xRange.x + borderWidth, yRange.x + borderWidth));
@@ -89,11 +96,13 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
             if (mode1 != null && CheckForMode1(uv, 0.0000001f))
             {
                 mode1.isOn = true;
+                if (diagonalMode1) diagonalMode1.gameObject.SetActive(true);
             }
 
             if (mode2 && CheckForMode2(uv, 0.0000001f))
             {
                 mode2.isOn = true;
+                if (diagonalMode2) diagonalMode2.gameObject.SetActive(true);
             }
         }
 
@@ -121,6 +130,9 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
                 }
                 marker.anchoredPosition = NormalizedToRectPosition(uv);
             }
+
+            if (diagonalMode1) diagonalMode1.gameObject.SetActive(CheckForMode1(uv, 0.0000001f));
+            if (diagonalMode2) diagonalMode2.gameObject.SetActive(CheckForMode2(uv, 0.0000001f));
 
             if (sim)
             {

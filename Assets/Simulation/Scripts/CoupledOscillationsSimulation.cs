@@ -334,6 +334,11 @@ public class CoupledOscillationsSimulation : Simulation
         }
     }
 
+    public void SetMassInteractivity(bool interactive)
+    {
+        massesAreDraggable = interactive;
+    }
+
     private double ComputeEnergy()
     {
         double KE = mass1.mass * x[2] * x[2] + mass2.mass * x[3] * x[3];

@@ -6,6 +6,7 @@ public class MassiveObject : MonoBehaviour
     public float HalfScale { get { return 0.5f * transform.localScale.x; } }
 
     [Header("Interactions")]
+    [SerializeField] private bool interactable;
     [SerializeField] private Texture2D hoverCursor = null;
     [SerializeField] private Vector2 hotspot = default;
 
@@ -17,6 +18,8 @@ public class MassiveObject : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (!interactable) return;
+
         // Display the cursor while hovering
         if (hoverCursor != null)
         {
@@ -26,6 +29,8 @@ public class MassiveObject : MonoBehaviour
 
     private void OnMouseExit()
     {
+        if (!interactable) return;
+
         RestoreDefault();
     }
 
@@ -41,5 +46,10 @@ public class MassiveObject : MonoBehaviour
     private void OnDisable()
     {
         RestoreDefault();
+    }
+
+    public void SetInteractable(bool interactable)
+    {
+        this.interactable = interactable;
     }
 }

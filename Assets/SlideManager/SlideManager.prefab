@@ -153,6 +153,7 @@ MonoBehaviour:
   currentSlideIndex: 0
   navigation: {fileID: 668152092768172294}
   clickableBubbles: 1
+  useProgressBar: 0
   fadeInTime: 0.3
   fadeInDelay: 0
   fadeOutTime: 0.3

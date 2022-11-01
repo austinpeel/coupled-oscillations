@@ -541,6 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeLanguage: 0
   theme: 0
+  state: {fileID: 11400000, guid: 03dc81d3481844a31ba35a7c79b356f1, type: 2}
   labelEN: {fileID: 3445659555731180382}
   labelFR: {fileID: 3445659555046754648}
   lightActiveColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
@@ -744,6 +745,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textEN: Title
   textFR: Titre
+  transformsEN: {fileID: 0}
+  transformsFR: {fileID: 0}
 --- !u!1 &3445659556848988076
 GameObject:
   m_ObjectHideFlags: 0

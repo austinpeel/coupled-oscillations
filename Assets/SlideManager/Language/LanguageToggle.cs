@@ -10,6 +10,8 @@ public class LanguageToggle : MonoBehaviour, IPointerClickHandler
     public enum Theme { Light, Dark }
     [SerializeField] private Theme theme = Theme.Light;
 
+    public LanguageState state = default;
+
     public delegate void OnSetLanguage(string language);
     public static event OnSetLanguage onSetLanguage;
 
@@ -32,20 +34,30 @@ public class LanguageToggle : MonoBehaviour, IPointerClickHandler
     {
         // Signal to other listening scripts to display the active language
         SetTheme(theme);
-        SetLanguage(activeLanguage);
+        // SetLanguage(activeLanguage);
+        if (state)
+        {
+            SetLanguage(state.language);
+        }
+        else
+        {
+            SetLanguage(activeLanguage);
+        }
     }
 
-    private void OnValidate()
-    {
-        SetTheme(theme);
-        SetLanguage(activeLanguage);
-    }
+    // private void OnValidate()
+    // {
+    //     Debug.Log("LanguageToggle OnValidate");
+    //     SetTheme(theme);
+    //     SetLanguage(activeLanguage);
+    // }
 
     public void SetLanguage(Language language)
     {
         activeLanguage = language;
         UpdateLanguageDisplay(activeLanguage);
         onSetLanguage?.Invoke(activeLanguage.ToString());
+        if (state) state.language = language;
     }
 
     public void SetTheme(Theme theme)
@@ -72,6 +84,7 @@ public class LanguageToggle : MonoBehaviour, IPointerClickHandler
     private void ToggleDisplay()
     {
         activeLanguage = (activeLanguage == Language.EN) ? Language.FR : Language.EN;
+        if (state) state.language = activeLanguage;
         UpdateLanguageDisplay(activeLanguage);
     }
 

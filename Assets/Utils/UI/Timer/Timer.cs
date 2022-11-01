@@ -6,9 +6,11 @@ public class Timer : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timeDisplay;
     [SerializeField] private PlayButton playButton;
+    [SerializeField] private float maxTime = 99.99f;
 
     private float elapsedTime;
     private bool timerIsRunning;
+    private bool maxTimeReached;
 
     private void Start()
     {
@@ -17,9 +19,14 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (timerIsRunning)
+        if (timerIsRunning && !maxTimeReached)
         {
             elapsedTime += Time.deltaTime;
+            if (elapsedTime >= maxTime)
+            {
+                elapsedTime = maxTime;
+                maxTimeReached = true;
+            }
             UpdateTimeDisplay(elapsedTime);
         }
     }
@@ -53,6 +60,7 @@ public class Timer : MonoBehaviour
         PauseTimer();
         elapsedTime = 0;
         UpdateTimeDisplay(elapsedTime);
+        maxTimeReached = false;
     }
 
     private void UpdateTimeDisplay(float time)

@@ -1651,10 +1651,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3445659556066981870, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
-      propertyPath: theme
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3445659556066981870, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: activeLanguage
       value: 0
       objectReference: {fileID: 0}
@@ -1716,7 +1712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9158236689183318759, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: m_text
-      value: Coupled Oscillations
+      value: "Oscillations Coupl\xE9es"
       objectReference: {fileID: 0}
     - target: {fileID: 9158236689183318759, guid: deee45de5e80c47bd8a4e192483fbbd3, type: 3}
       propertyPath: m_fontSize

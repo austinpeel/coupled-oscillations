@@ -33,9 +33,14 @@ public class CoupledOscillationsSimulation : Simulation
     [Header("Buttons")]
     [SerializeField] private PlayButton playButton;
 
+    [Header("UI")]
+    [SerializeField] private CoordinateSpace2D coordinateSpace;
+
     private double[] x;
     private double[] xdot;
     private double[][] constants;
+
+    private bool resumeOnMouseUp = false;
 
     private void Awake()
     {
@@ -98,6 +103,7 @@ public class CoupledOscillationsSimulation : Simulation
             {
                 dragMass = hitInfo.transform;
                 dragOffset = hitInfo.point - dragMass.position;
+                resumeOnMouseUp = !paused;
                 Pause();
             }
         }
@@ -122,6 +128,8 @@ public class CoupledOscillationsSimulation : Simulation
                 }
                 dragMass.position = position;
                 UpdateSpringPositions();
+
+                if (coordinateSpace) coordinateSpace.SetMarkerPositionFromX1X2(x[0], x[1]);
             }
         }
 
@@ -140,6 +148,9 @@ public class CoupledOscillationsSimulation : Simulation
 
             dragMass = null;
             dragOffset = Vector3.zero;
+
+            if (coordinateSpace) coordinateSpace.SetMarkerPositionFromX1X2(x[0], x[1]);
+            if (resumeOnMouseUp) Resume();
         }
     }
 
@@ -305,32 +316,50 @@ public class CoupledOscillationsSimulation : Simulation
         UpdateSpringPositions();
     }
 
-    public void SetMass(float value)
+    public void SetMass(float value, bool startFromRest = false)
     {
         if (mass1 && mass2)
         {
             mass1.SetMass(value);
             mass2.SetMass(value);
             UpdateCouplingConstants();
+            if (paused) UpdateSpringPositions();
+            if (startFromRest)
+            {
+                UpdateX((float)x[0], (float)x[1]);
+                UpdateXDot();
+            }
         }
     }
 
-    public void SetK1(float value)
+    public void SetK1(float value, bool startFromRest = false)
     {
         if (spring1 && spring3)
         {
             spring1.k = value;
             spring3.k = value;
             UpdateCouplingConstants();
+            if (paused) UpdateSpringPositions();
+            if (startFromRest)
+            {
+                UpdateX((float)x[0], (float)x[1]);
+                UpdateXDot();
+            }
         }
     }
 
-    public void SetK2(float value)
+    public void SetK2(float value, bool startFromRest = false)
     {
         if (spring2)
         {
             spring2.k = value;
             UpdateCouplingConstants();
+            if (paused) UpdateSpringPositions();
+            if (startFromRest)
+            {
+                UpdateX((float)x[0], (float)x[1]);
+                UpdateXDot();
+            }
         }
     }
 

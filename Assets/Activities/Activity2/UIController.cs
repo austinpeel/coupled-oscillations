@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private ToggleGroup toggleGroup;
     [SerializeField] private float amplitude = 1f;
     [SerializeField, Min(0)] private int numDecimalDigits = 1;
+    [SerializeField] private bool pauseOnSliderChange = false;
 
     private int currentMode = 1;
 
@@ -35,7 +36,7 @@ public class UIController : MonoBehaviour
     {
         if (sim)
         {
-            sim.SetMass(RoundToDecimalPlace(mass, numDecimalDigits));
+            sim.SetMass(RoundToDecimalPlace(mass, numDecimalDigits), pauseOnSliderChange);
             if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
     }
@@ -44,7 +45,7 @@ public class UIController : MonoBehaviour
     {
         if (sim)
         {
-            sim.SetK1(RoundToDecimalPlace(k1, numDecimalDigits));
+            sim.SetK1(RoundToDecimalPlace(k1, numDecimalDigits), pauseOnSliderChange);
             if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
     }
@@ -53,7 +54,7 @@ public class UIController : MonoBehaviour
     {
         if (sim)
         {
-            sim.SetK2(RoundToDecimalPlace(k2, numDecimalDigits));
+            sim.SetK2(RoundToDecimalPlace(k2, numDecimalDigits), pauseOnSliderChange);
             if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
     }

@@ -387,7 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9607843, g: 0.9647059, b: 0.9843137, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2499,18 +2499,6 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 2971509764091483976, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_Color.b
-      value: 0.9529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971509764091483976, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_Color.g
-      value: 0.91764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971509764091483976, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9137255
-      objectReference: {fileID: 0}
     - target: {fileID: 3320239221602193927, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_SizeDelta.x
       value: 70
@@ -2526,26 +2514,6 @@ PrefabInstance:
     - target: {fileID: 3320239222228001370, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_fontSizeBase
       value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735444073542891474, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_Color.b
-      value: 0.9528302
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735444073542891474, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_Color.g
-      value: 0.91912156
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735444073542891474, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_Color.r
-      value: 0.91237986
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329073921224169256, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 290
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329073921224169256, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 5284163004807630213, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_IsActive
@@ -2643,10 +2611,6 @@ PrefabInstance:
       propertyPath: sim
       value: 
       objectReference: {fileID: 829830472}
-    - target: {fileID: 8594290873371702222, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 290
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
 --- !u!1001 &9122682873632480352

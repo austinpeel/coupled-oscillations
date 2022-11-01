@@ -49,7 +49,7 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     private void Start()
     {
-        if (startPaused) sim.Pause();
+        Reset(startPaused);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -157,7 +157,30 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
             if (sim.paused || !marker) { return; }
 
             double[] x = sim.GetX1X2();
-            marker.anchoredPosition = ScaledToRectPosition(new Vector2((float)x[0], (float)x[1]));
+            SetMarkerPositionFromX1X2(x[0], x[1]);
+            // marker.anchoredPosition = ScaledToRectPosition(new Vector2((float)x[0], (float)x[1]));
+        }
+    }
+
+    public void Reset(bool pause)
+    {
+        if (sim && marker)
+        {
+            sim.Reset(pause);
+            double[] x = sim.GetX1X2();
+            SetMarkerPositionFromX1X2(x[0], x[1]);
+            // marker.anchoredPosition = ScaledToRectPosition(new Vector2((float)x[0], (float)x[1]));
+        }
+
+        if (diagonalMode1) diagonalMode1.gameObject.SetActive(false);
+        if (diagonalMode2) diagonalMode2.gameObject.SetActive(false);
+    }
+
+    public void SetMarkerPositionFromX1X2(double x1, double x2)
+    {
+        if (marker)
+        {
+            marker.anchoredPosition = ScaledToRectPosition(new Vector2((float)x1, (float)x2));
         }
     }
 

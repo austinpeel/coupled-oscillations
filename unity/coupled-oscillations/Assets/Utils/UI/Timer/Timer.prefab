@@ -642,6 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeDisplay: {fileID: 8431775933620247890}
   playButton: {fileID: 3702032363868034555}
+  maxTime: 99.99
 --- !u!222 &4271807760145873678
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1047,8 +1048,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00.00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a488040d6a2c1433190562d3f3bcfcb3, type: 2}
-  m_sharedMaterial: {fileID: 9084797396186954510, guid: a488040d6a2c1433190562d3f3bcfcb3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4310b3297925f4ef391efd0ccc5a8307, type: 2}
+  m_sharedMaterial: {fileID: 1836035325777795792, guid: 4310b3297925f4ef391efd0ccc5a8307, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

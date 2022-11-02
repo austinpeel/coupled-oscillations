@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/coupled-oscillations/static/css/main.3604d12a.css",
+    "main.js": "/coupled-oscillations/static/js/main.de924da8.js",
+    "static/js/787.7e9c1a1c.chunk.js": "/coupled-oscillations/static/js/787.7e9c1a1c.chunk.js",
+    "index.html": "/coupled-oscillations/index.html",
+    "main.3604d12a.css.map": "/coupled-oscillations/static/css/main.3604d12a.css.map",
+    "main.de924da8.js.map": "/coupled-oscillations/static/js/main.de924da8.js.map",
+    "787.7e9c1a1c.chunk.js.map": "/coupled-oscillations/static/js/787.7e9c1a1c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3604d12a.css",
+    "static/js/main.de924da8.js"
+  ]
+}

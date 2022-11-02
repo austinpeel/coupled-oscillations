@@ -8,7 +8,7 @@
   margin-bottom: 1rem;
   letter-spacing: 0.5px;
   line-height: 1.5rem;
-  background-color: black;
+  background-color: rgb(214, 214, 214);
 }
 
 .unity-app > .unity {
@@ -23,7 +23,7 @@
   left: 0; */
   width: 100%;
   height: 100%;
-  background: grey;
+  background: rgb(214, 214, 214);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -370,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 60, y: 50}
-  m_SizeDelta: {x: 390, y: 250}
+  m_AnchoredPosition: {x: 70, y: 50}
+  m_SizeDelta: {x: 380, y: 230}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &348288569
 MonoBehaviour:
@@ -562,7 +562,7 @@ MonoBehaviour:
   textEN: Which initial conditions give rise to the normal modes described by <color=#ffffff00>w 
     </color> and <color=#ffffff00>w2</color>? Why?
   textFR: "Quelles conditions initiales donnent lieu aux modes normaux d\xE9crits
-    par <color=#ffffff00>w1 </color> et <color=#ffffff00>w </color> ? Pourquoi ?"
+    par <color=#ffffff00>w1</color> et <color=#ffffff00>w</color>  ? Pourquoi ?"
   transformsEN: {fileID: 890709542}
   transformsFR: {fileID: 1796323328}
 --- !u!1 &558030010
@@ -599,7 +599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 163.3, y: -66.6}
+  m_AnchoredPosition: {x: 134.9, y: -65.6}
   m_SizeDelta: {x: 88, y: 56}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &558030012
@@ -674,8 +674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -20}
-  m_SizeDelta: {x: 230.18, y: 50}
+  m_AnchoredPosition: {x: 0.000030517578, y: -30}
+  m_SizeDelta: {x: 230.18, y: 55}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &794295067 stripped
 RectTransform:
@@ -1060,7 +1060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2.4, y: 0}
   m_SizeDelta: {x: 512, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1201654071
@@ -1136,8 +1136,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90, y: 70}
-  m_SizeDelta: {x: 230, y: 220}
+  m_AnchoredPosition: {x: -80, y: 50}
+  m_SizeDelta: {x: 250, y: 230}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1610432687
 GameObject:
@@ -1173,7 +1173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.2, y: -85.4}
+  m_AnchoredPosition: {x: 204.1, y: -65.83}
   m_SizeDelta: {x: 88, y: 56}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1610432689
@@ -1351,7 +1351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.2, y: -86.3}
+  m_AnchoredPosition: {x: 200.18, y: -65.6}
   m_SizeDelta: {x: 88, y: 56}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1764639283
@@ -1876,7 +1876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 173.6, y: -65.9}
+  m_AnchoredPosition: {x: 165.8, y: -65.83}
   m_SizeDelta: {x: 88, y: 56}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2086674981
@@ -1964,7 +1964,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 21a8419d40c504d4e911a7df74fb06da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0dcb981c2ceec4de281c39d4b9c37743, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2023,8 +2023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441d0cd3b15db40fdad9b29a49044185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textEN: "Click on the coordinate grid to set the initial mass \npositions simultaneously."
-  textFR: "Cliquez sur les coordonn\xE9es pour choisir simultan\xE9ment \nles positions
+  textEN: "Click on the coordinate grid to set the \ninitial mass positions simultaneously."
+  textFR: "Cliquez sur les coordonn\xE9es pour choisir \nsimultan\xE9ment les positions
     initiales des masses."
   transformsEN: {fileID: 0}
   transformsFR: {fileID: 0}
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Click on the coordinate grid to set the initial mass \npositions simultaneously."
+  m_text: "Click on the coordinate grid to set the \ninitial mass positions simultaneously."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0de5a858dbd984e63aa82481dd8d6074, type: 2}
   m_sharedMaterial: {fileID: -5584794868368336635, guid: 0de5a858dbd984e63aa82481dd8d6074, type: 2}
@@ -2205,7 +2205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2340,7 +2340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 190}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3680292012983060683
@@ -2493,12 +2493,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2527554342486079635, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_fontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527554342486079635, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 920d34190d3c14378bba3a917f6692cc, type: 2}
+    - target: {fileID: 2527554342486079635, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
+      propertyPath: m_fontStyle
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2527554342486079635, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_fontSizeBase
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2527554342486079635, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2550595863583924389, guid: 920d34190d3c14378bba3a917f6692cc, type: 2}
     - target: {fileID: 3320239221602193927, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_SizeDelta.x
       value: 70
@@ -2509,12 +2521,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3320239222228001370, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_fontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320239222228001370, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 920d34190d3c14378bba3a917f6692cc, type: 2}
+    - target: {fileID: 3320239222228001370, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
+      propertyPath: m_fontStyle
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3320239222228001370, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_fontSizeBase
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 3320239222228001370, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2550595863583924389, guid: 920d34190d3c14378bba3a917f6692cc, type: 2}
     - target: {fileID: 5284163004807630213, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2553,11 +2577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6497445121244760969, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 230
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 6497445121244760969, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 230
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 6497445121244760969, guid: 57e8051eee0c64f9e953489952304d04, type: 3}
       propertyPath: m_LocalPosition.x

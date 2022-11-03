@@ -592,7 +592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143.5, y: 4.6}
+  m_AnchoredPosition: {x: -143.5, y: -21.6}
   m_SizeDelta: {x: 72, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &26196101
@@ -2588,7 +2588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99442c0f4648a4e41a157598cd97053e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2dd8f7713057942fda39ceed1d596675, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3102,6 +3102,7 @@ RectTransform:
   m_Children:
   - {fileID: 26196100}
   - {fileID: 371472343}
+  - {fileID: 634022968}
   m_Father: {fileID: 878037621435336794}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3184,6 +3185,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614523136}
+  m_CullTransparentMesh: 1
+--- !u!1 &634022967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634022968}
+  - component: {fileID: 634022970}
+  - component: {fileID: 634022969}
+  m_Layer: 5
+  m_Name: Displacement FR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &634022968
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634022967}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 613414251}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -251.79, y: 30.78}
+  m_SizeDelta: {x: 39, y: 57}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &634022969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634022967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 72c0ae2ac07c540f883bfdb2d5610016, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &634022970
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634022967}
   m_CullTransparentMesh: 1
 --- !u!114 &706611560 stripped
 MonoBehaviour:
@@ -3840,6 +3916,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695cc1f3d5fc647d0882b345108e1686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &925838624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925838625}
+  - component: {fileID: 925838627}
+  - component: {fileID: 925838626}
+  m_Layer: 5
+  m_Name: Displacement EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &925838625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925838624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1230519796}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 147.55, y: 56.46}
+  m_SizeDelta: {x: 39, y: 57}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &925838626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925838624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 72c0ae2ac07c540f883bfdb2d5610016, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &925838627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925838624}
+  m_CullTransparentMesh: 1
 --- !u!1 &958414377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4519,7 +4670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92fe138f30e094f878b99225ce2077f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 183271a21c938483688da3f430d4e983, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4753,6 +4904,7 @@ RectTransform:
   m_Children:
   - {fileID: 1375786810}
   - {fileID: 1136288525}
+  - {fileID: 925838625}
   m_Father: {fileID: 878037621435336794}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5182,7 +5334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 183.2, y: 30.3}
+  m_AnchoredPosition: {x: 183.2, y: 4.4}
   m_SizeDelta: {x: 72, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375786811
@@ -6904,9 +7056,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u2022 There is no gravitational force or air resistance.\n\u2022 Hooke's
-    law holds for each spring:                             .\n\u2022 All three springs
-    are massless and have identical rest lengths <color=#ffffff00>l_0</color>.\n\u2022
-    The motion is purely one-dimensional."
+    law holds for each spring:                             , where     is \n  the
+    spring displacement.\n\u2022 All three springs are massless and have identical
+    rest lengths <color=#ffffff00>l_0</color>.\n\u2022 The motion is purely one-dimensional."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -7028,14 +7180,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textEN: "\u2022 There is no gravitational force or air resistance.\n\u2022 Hooke's
-    law holds for each spring:                             .\n\u2022 All three springs
-    are massless and have identical rest lengths <color=#ffffff00>l_0</color>.\n\u2022
-    The motion is purely one-dimensional."
+    law holds for each spring:                             , where     is \n  the
+    spring displacement.\n\u2022 All three springs are massless and have identical
+    rest lengths <color=#ffffff00>l_0</color>.\n\u2022 The motion is purely one-dimensional."
   textFR: "\u2022 Il n'y a pas de force gravitationnelle ni de r\xE9sistance de l'air.\n\u2022
     La loi de Hooke s'applique \xE0 chaque ressort :                            
-    .\n\u2022 Les trois ressorts sont sans masse et ont des longueurs de repos \n  
-    identiques de <color=#ffffff00>l_0</color>.\n\u2022 Le mouvement est purement
-    unidimensionnel."
+    , o\xF9\n      repr\xE9sente le d\xE9placement du ressort.\n\u2022 Les trois
+    ressorts sont sans masse et ont des longueurs de repos \n   identiques de <color=#ffffff00>l_0</color>.\n\u2022
+    Le mouvement est purement unidimensionnel."
   transformsEN: {fileID: 1230519796}
   transformsFR: {fileID: 613414251}
 --- !u!222 &878037621435336799
@@ -9087,9 +9239,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4852161584887105400, guid: 6a1f129935b6f489fb86702340482097, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7490196
+      objectReference: {fileID: 0}
     - target: {fileID: 4852161584887105402, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_Name
       value: Click Through Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852161584887105402, guid: 6a1f129935b6f489fb86702340482097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4852161584887105403, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_Pivot.x
@@ -9267,6 +9427,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7384377814686070292, guid: 6a1f129935b6f489fb86702340482097, type: 3}
+      propertyPath: m_Name
+      value: Icon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384377814686070294, guid: 6a1f129935b6f489fb86702340482097, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dcb981c2ceec4de281c39d4b9c37743, type: 3}
     - target: {fileID: 7384377814686070295, guid: 6a1f129935b6f489fb86702340482097, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

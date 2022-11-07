@@ -30,6 +30,8 @@ public class CoupledOscillationsSimulation : Simulation
     private Transform dragMass = null;
     private Vector3 dragOffset = Vector3.zero;
 
+    public float x0 => (float)x2Ref;
+
     [Header("Buttons")]
     [SerializeField] private PlayButton playButton;
 

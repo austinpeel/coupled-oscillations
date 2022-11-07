@@ -276,21 +276,25 @@ public class CoupledOscillationsSimulation : Simulation
     public float[] GetSpring1Endpoints()
     {
         float offsetWall1 = wall1 ? 0.5f * wall1.localScale.x : 0;
-        float offsetMass1 = mass1 ? mass1.HalfScale : 0;
+        // float offsetMass1 = mass1 ? mass1.HalfScale : 0;
+        float offsetMass1 = 0;
         return new float[2] { x1Wall + offsetWall1, (float)(x[0] + x1Ref) - offsetMass1 };
     }
 
     public float[] GetSpring2Endpoints()
     {
-        float offsetMass1 = mass1 ? mass1.HalfScale : 0;
-        float offsetMass2 = mass2 ? mass2.HalfScale : 0;
+        // float offsetMass1 = mass1 ? mass1.HalfScale : 0;
+        // float offsetMass2 = mass2 ? mass2.HalfScale : 0;
+        float offsetMass1 = 0;
+        float offsetMass2 = 0;
         return new float[2] { (float)(x[0] + x1Ref) + offsetMass1, (float)(x[1] + x2Ref) - offsetMass2 };
     }
 
     public float[] GetSpring3Endpoints()
     {
         float offsetWall2 = wall2 ? 0.5f * wall2.localScale.x : 0;
-        float offsetMass2 = mass2 ? mass2.HalfScale : 0;
+        // float offsetMass2 = mass2 ? mass2.HalfScale : 0;
+        float offsetMass2 = 0;
         return new float[2] { (float)(x[1] + x2Ref) + offsetMass2, x2Wall - offsetWall2 };
     }
 

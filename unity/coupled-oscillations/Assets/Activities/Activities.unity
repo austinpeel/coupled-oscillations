@@ -141,12 +141,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6630728238506993889, guid: 9ee20eafb5f094ea6b6424bb51947619, type: 3}
       propertyPath: textEN
-      value: Measure the frequencies of the two normal modes and compare the result
-        to theory.
+      value: Measure the periods of the two normal modes and compare the result to
+        theory.
       objectReference: {fileID: 0}
     - target: {fileID: 6630728238506993889, guid: 9ee20eafb5f094ea6b6424bb51947619, type: 3}
       propertyPath: textFR
-      value: "Mesurez les fr\xE9quences des deux modes normaux et comparez le r\xE9sultat
+      value: "Mesurez les p\xE9riodes des deux modes normaux et comparez le r\xE9sultat
         \xE0 la valeur th\xE9orique."
       objectReference: {fileID: 0}
     - target: {fileID: 6630728238529657200, guid: 9ee20eafb5f094ea6b6424bb51947619, type: 3}
@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1048611103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -690,7 +690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1675243650
 RectTransform:
   m_ObjectHideFlags: 0

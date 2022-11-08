@@ -81,6 +81,8 @@ public class UIController : MonoBehaviour
         if (sim && stopAfterOnePeriod)
         {
             float[] periods = sim.GetNormalModePeriods();
+            periods[0] = Mathf.Clamp(periods[0], 0, 99.99f);
+            periods[1] = Mathf.Clamp(periods[1], 0, 99.99f);
             timer.SetMaxTime(currentMode == 1 ? periods[0] : periods[1]);
         }
         else

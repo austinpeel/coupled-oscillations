@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119265480}
   m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa577bb779a2413b824a171838974d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: -0.63, z: -20}
-  targetRotation: {x: 3.3, y: 0, z: 0}
+  targetPosition: {x: 0, y: -0.63, z: -16}
+  targetRotation: {x: 3.8, y: 0, z: 0}
   moveTime: 1
   state: {fileID: 11400000, guid: 4142d516b6c8d45ab98b9075babf832f, type: 2}
 --- !u!1 &188947641
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "P\xE9riodes des modes normaux :"
+  m_text: 'Normal mode periods:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -703,6 +703,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395719776}
   m_CullTransparentMesh: 1
+--- !u!114 &572563566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3813664248335285723, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+  m_PrefabInstance: {fileID: 3813664249582005879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3488ee34c3bb8427fa338419b39e8c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &815942361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1704,10 +1715,10 @@ RectTransform:
   m_Father: {fileID: 2760351222108006560}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 34, y: -35}
-  m_SizeDelta: {x: 48, y: 48}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &243898001449298782
 GameObject:
@@ -1763,7 +1774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Une p\xE9riode"
+  m_text: One period
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -1943,7 +1954,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!224 &2213823072065422378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1962,7 +1973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 24.4, y: 27}
+  m_AnchoredPosition: {x: 24.4, y: 29}
   m_SizeDelta: {x: 120, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &2213823072065422379
@@ -2217,7 +2228,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 654.3, y: 70}
+  m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2760351222108006561
 MonoBehaviour:
@@ -2276,7 +2287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2760351222384646705
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2438,10 +2449,10 @@ RectTransform:
   m_Father: {fileID: 2760351222108006560}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 343.65, y: -35}
-  m_SizeDelta: {x: 571.3, y: 35}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2760351223104945877
 MonoBehaviour:
@@ -2480,8 +2491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Utilisez le chronom\xE8tre pour v\xE9rifier exp\xE9rimentalement \nles
-    p\xE9riodes des modes normaux."
+  m_text: "Use the timer to experimentally verify the \nperiods of the normal modes."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0de5a858dbd984e63aa82481dd8d6074, type: 2}
   m_sharedMaterial: {fileID: -5584794868368336635, guid: 0de5a858dbd984e63aa82481dd8d6074, type: 2}
@@ -2656,6 +2666,14 @@ PrefabInstance:
       propertyPath: sim
       value: 
       objectReference: {fileID: 2049812764}
+    - target: {fileID: 3813664248410450224, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 572563566}
+    - target: {fileID: 3813664248410450224, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: periodToggle
+      value: 
+      objectReference: {fileID: 2213823072065422377}
     - target: {fileID: 3813664248410450225, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2735,6 +2753,34 @@ PrefabInstance:
     - target: {fileID: 3813664248817917908, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813664249377122187, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813664249377122187, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813664249377122187, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813664249377122187, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813664249377122187, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813664249377122187, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813664249377122187, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3813664249475513856, guid: 9eba682a11c554aeb91385068e524f62, type: 3}
       propertyPath: m_AnchorMax.x

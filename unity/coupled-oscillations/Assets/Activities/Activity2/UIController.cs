@@ -9,11 +9,16 @@ public class UIController : MonoBehaviour
     [SerializeField, Min(0)] private int numDecimalDigits = 1;
     [SerializeField] private bool pauseOnSliderChange = false;
 
+    [Header("Timer")]
+    [SerializeField] private Timer timer;
+    [SerializeField] private Toggle periodToggle;
+
     private int currentMode = 1;
 
     private void Start()
     {
         if (toggleGroup && sim) sim.EnterNormalMode(true, amplitude);
+        if (periodToggle) HandlePeriodToggleChange(periodToggle.isOn);
     }
 
     public void HandleModeToggle()
@@ -24,10 +29,8 @@ public class UIController : MonoBehaviour
             if (!toggle.name.Contains(currentMode.ToString()))
             {
                 currentMode = currentMode == 1 ? 2 : 1;
-                if (sim)
-                {
-                    sim.EnterNormalMode(currentMode == 1, amplitude);
-                }
+                if (sim) sim.EnterNormalMode(currentMode == 1, amplitude);
+                if (periodToggle) HandlePeriodToggleChange(periodToggle.isOn);
             }
         }
     }
@@ -39,6 +42,8 @@ public class UIController : MonoBehaviour
             sim.SetMass(RoundToDecimalPlace(mass, numDecimalDigits), pauseOnSliderChange);
             if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
+
+        if (periodToggle) HandlePeriodToggleChange(periodToggle.isOn);
     }
 
     public void HandleK1Change(float k1)
@@ -48,6 +53,8 @@ public class UIController : MonoBehaviour
             sim.SetK1(RoundToDecimalPlace(k1, numDecimalDigits), pauseOnSliderChange);
             if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
+
+        if (periodToggle) HandlePeriodToggleChange(periodToggle.isOn);
     }
 
     public void HandleK2Change(float k2)
@@ -57,11 +64,28 @@ public class UIController : MonoBehaviour
             sim.SetK2(RoundToDecimalPlace(k2, numDecimalDigits), pauseOnSliderChange);
             if (toggleGroup) sim.EnterNormalMode(currentMode == 1, amplitude);
         }
+
+        if (periodToggle) HandlePeriodToggleChange(periodToggle.isOn);
     }
 
     private float RoundToDecimalPlace(float value, int decimalPlace)
     {
         float factor = Mathf.Pow(10f, decimalPlace);
         return Mathf.Round(factor * value) / factor;
+    }
+
+    public void HandlePeriodToggleChange(bool stopAfterOnePeriod)
+    {
+        if (!timer) return;
+
+        if (sim && stopAfterOnePeriod)
+        {
+            float[] periods = sim.GetNormalModePeriods();
+            timer.SetMaxTime(currentMode == 1 ? periods[0] : periods[1]);
+        }
+        else
+        {
+            timer.SetMaxTime(99.99f);
+        }
     }
 }

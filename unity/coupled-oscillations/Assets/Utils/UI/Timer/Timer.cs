@@ -70,4 +70,10 @@ public class Timer : MonoBehaviour
             timeDisplay.text = time.ToString("00.00");
         }
     }
+
+    public void SetMaxTime(float time, bool reset = true)
+    {
+        maxTime = time;
+        if (reset) ResetTimer();
+    }
 }

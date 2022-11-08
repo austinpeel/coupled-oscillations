@@ -313,6 +313,13 @@ public class CoupledOscillationsSimulation : Simulation
         return spring3.k;
     }
 
+    public float[] GetNormalModePeriods()
+    {
+        float t1 = 2 * Mathf.PI * Mathf.Sqrt(mass1.mass / spring1.k);
+        float t2 = 2 * Mathf.PI * Mathf.Sqrt(mass1.mass / (spring1.k + 2 * spring2.k));
+        return new float[2] { t1, t2 };
+    }
+
     public void EnterNormalMode(bool first, float amplitude)
     {
         float sign = first ? 1 : -1;

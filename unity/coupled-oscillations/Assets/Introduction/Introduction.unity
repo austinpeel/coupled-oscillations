@@ -592,10 +592,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Il existe un <i>deuxi\xE8me mode normal</i> o\xF9 les <font-weight=\"700\"><color=#5BABF1>masses</color></font-weight>
-    oscillent toujours ensemble, mais o\xF9 elles sont d\xE9synchronis\xE9es l'une
-    par rapport \xE0 l'autre. Dans ce mode, les trois ressorts s'\xE9tirent et se
-    compriment, mais toujours de mani\xE8re r\xE9p\xE9titive et pr\xE9visible."
+  m_text: There is a <i>second normal mode</i> where the <font-weight="700"><color=#5BABF1>masses</color></font-weight>
+    still oscillate together, but instead they are out of sync with each other. Now
+    all three springs are stretching and compressing, though still in a repetitive
+    and predictable way.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
   m_sharedMaterial: {fileID: 4303336837466598660, guid: ea838625e000443bb85ccb2eff18976f, type: 2}
@@ -903,6 +903,7 @@ MonoBehaviour:
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
   playButton: {fileID: 0}
+  coordinateSpace: {fileID: 0}
 --- !u!4 &277578618
 Transform:
   m_ObjectHideFlags: 0
@@ -2908,6 +2909,7 @@ MonoBehaviour:
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
   playButton: {fileID: 0}
+  coordinateSpace: {fileID: 0}
 --- !u!4 &1190838172
 Transform:
   m_ObjectHideFlags: 0
@@ -4530,6 +4532,7 @@ MonoBehaviour:
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
   playButton: {fileID: 0}
+  coordinateSpace: {fileID: 0}
 --- !u!4 &1982825949
 Transform:
   m_ObjectHideFlags: 0

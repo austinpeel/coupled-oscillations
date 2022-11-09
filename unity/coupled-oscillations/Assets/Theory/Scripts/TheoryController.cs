@@ -167,4 +167,24 @@ public class TheoryController : MonoBehaviour
     {
         elapsedTime = 0;
     }
+
+    public void SetXRPlotVisibility(bool visible)
+    {
+        graph.SetLineVisibility(0, visible);
+    }
+
+    public void SetX1PlotVisibility(bool visible)
+    {
+        graph.SetLineVisibility(1, visible);
+    }
+
+    public void SetX2PlotVisibility(bool visible)
+    {
+        graph.SetLineVisibility(2, visible);
+    }
+
+    public void SetCMPlotVisibility(bool visible)
+    {
+        graph.SetLineVisibility(3, visible);
+    }
 }

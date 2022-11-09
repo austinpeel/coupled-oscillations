@@ -74,7 +74,7 @@ public class DynamicGraph : MonoBehaviour
     public void PlotPoint(int lineIndex, Vector2 position)
     {
         if (lineIndex < 0 || lineIndex >= lines.Count) return;
-
+        if (!lines[lineIndex].gameObject.activeInHierarchy) return;
         if (position.x > xMax && !rolling) return;
 
         if (rolling && position.x > xMax)
@@ -117,6 +117,14 @@ public class DynamicGraph : MonoBehaviour
         }
 
         return normalizedPosition;
+    }
+
+    public void SetLineVisibility(int lineIndex, bool visible)
+    {
+        if (lines == null) return;
+        if (lineIndex < 0 || lineIndex >= lines.Count) return;
+
+        lines[lineIndex].gameObject.SetActive(visible);
     }
 
     private Vector2 UVToCoordinatePosition(Vector2 uv)

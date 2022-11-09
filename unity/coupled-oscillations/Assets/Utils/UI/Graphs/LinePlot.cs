@@ -21,8 +21,8 @@ public class LinePlot : MonoBehaviour
     {
         points = new List<Vector2>();
 
-        markerContainer = CreateContainer("Markers");
-        lineContainer = CreateContainer("Lines");
+        if (!markerContainer) markerContainer = CreateContainer("Markers");
+        if (!lineContainer) lineContainer = CreateContainer("Lines");
     }
 
     private void OnDisable()

@@ -25,6 +25,16 @@ public class TheoryController : MonoBehaviour
     [SerializeField] private Arrow force22;
     [SerializeField] private Arrow force32;
 
+    [Header("Graphs")]
+    [SerializeField] private DynamicGraph graph;
+    [SerializeField, Min(0)] private float graphDeltaTime = 0.1f;
+    [SerializeField] private Color x1Color = Color.black;
+    [SerializeField] private Color x2Color = Color.black;
+    [SerializeField] private Color cmColor = Color.black;
+    [SerializeField] private Color xRColor = Color.black;
+    private float graphTime;
+    private float elapsedTime;
+
     private void Start()
     {
         if (sim)
@@ -32,6 +42,14 @@ public class TheoryController : MonoBehaviour
             SetReferenceLengthScales();
             UpdateVectors();
             sim.Pause();
+
+            if (graph)
+            {
+                graph.CreateLine(xRColor, "XR");
+                graph.CreateLine(x1Color, "X1");
+                graph.CreateLine(x2Color, "X2");
+                graph.CreateLine(cmColor, "CM");
+            }
         }
     }
 
@@ -43,6 +61,7 @@ public class TheoryController : MonoBehaviour
         UpdateXMarkers();
         UpdateLengthScales();
         UpdateVectors();
+        UpdateGraph();
     }
 
     private void UpdateXMarkers()
@@ -116,5 +135,36 @@ public class TheoryController : MonoBehaviour
             float force = -scaleFactor * sim.GetK3() * (endpoint - lsRightRef.GetXPositionLeft());
             force32.SetComponents(force * Vector3.right);
         }
+    }
+
+    private void UpdateGraph()
+    {
+        if (!graph) return;
+
+        if (!sim.paused) elapsedTime += Time.deltaTime;
+
+        graphTime += Time.deltaTime;
+
+        if (graphTime >= graphDeltaTime)
+        {
+            double[] x = sim.GetX1X2(true);
+
+            Vector2 newX1 = new Vector2(elapsedTime, (float)x[0]);
+            Vector2 newX2 = new Vector2(elapsedTime, (float)x[1]);
+            Vector2 newCM = new Vector2(elapsedTime, 0.5f * (float)(x[0] + x[1]));
+            Vector2 newXR = new Vector2(elapsedTime, (float)(x[1] - x[0] - 2 * sim.x0));
+
+            graph.PlotPoint(0, newXR);
+            graph.PlotPoint(1, newX1);
+            graph.PlotPoint(2, newX2);
+            graph.PlotPoint(3, newCM);
+
+            graphTime = 0;
+        }
+    }
+
+    public void ResetTime()
+    {
+        elapsedTime = 0;
     }
 }

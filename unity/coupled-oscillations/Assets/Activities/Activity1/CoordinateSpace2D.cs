@@ -60,6 +60,17 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
         if (drawDottedLines)
         {
+            if (xDots != null)
+            {
+                DestroyImmediate(xDots.gameObject);
+                xDots = null;
+            }
+            if (yDots != null)
+            {
+                DestroyImmediate(yDots.gameObject);
+                yDots = null;
+            }
+
             xDots = CreateDottedLineContainer("X Dots", 0);
             yDots = CreateDottedLineContainer("Y Dots", 1);
         }
@@ -108,9 +119,9 @@ public class CoordinateSpace2D : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
         if (drawDottedLines)
         {
-            Destroy(xDots.gameObject);
+            DestroyImmediate(xDots.gameObject);
             xDots = null;
-            Destroy(yDots.gameObject);
+            DestroyImmediate(yDots.gameObject);
             yDots = null;
         }
     }

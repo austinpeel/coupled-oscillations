@@ -82,7 +82,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -158,10 +158,12 @@ MonoBehaviour:
   x2Ref: 2
   x1Wall: -5.6
   x2Wall: 5.6
+  simState: {fileID: 0}
   massesAreDraggable: 0
   x1Range: {x: -1, y: 0}
   x2Range: {x: 1, y: 0}
   playButton: {fileID: 0}
+  coordinateSpace: {fileID: 0}
 --- !u!1001 &9122682872305074732
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,5 @@
 {
   "name": "coupled-oscillations",
-  "homepage": "https://austinpeel.github.io/coupled-oscillations/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

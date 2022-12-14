@@ -42,6 +42,10 @@ function UnityApp(props) {
 
   // const element = document.getElementById('unity-app');
 
+  // function handleClick() {
+  //   requestFullscreen(true);
+  // }
+
   return (
     <div id='unity-app' className='unity-app'>
       {!isLoaded && (
@@ -54,6 +58,7 @@ function UnityApp(props) {
         {dimensions.width}, {dimensions.height}
       </p> */}
       {/* <p>{window.getComputedStyle(element).width}</p> */}
+      {/* <button onClick={handleClick}>Full screen</button> */}
     </div>
   );
 }

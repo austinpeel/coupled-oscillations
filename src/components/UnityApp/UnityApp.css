@@ -9,7 +9,7 @@
   letter-spacing: 0.5px;
   line-height: 1.5rem;
   background-color: rgb(214, 214, 214);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 }
 
 .unity-app > .unity {

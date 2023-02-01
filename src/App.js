@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import UnityApp from './components/UnityApp/UnityApp';
 
 const appData = {
@@ -16,7 +16,7 @@ function App() {
     <div className='container'>
       <Header />
       <UnityApp {...appData} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Unity, useUnityContext } from 'react-unity-webgl';
 import './UnityApp.css';
 
@@ -10,6 +10,7 @@ function UnityApp(props) {
     requestFullscreen,
     addEventListener,
     removeEventListener,
+    sendMessage,
   } = useUnityContext({
     loaderUrl: props.loaderUrl,
     dataUrl: props.dataUrl,
@@ -19,9 +20,12 @@ function UnityApp(props) {
 
   const loadingPercentage = Math.round(loadingProgression * 100);
 
+  const [unityIsFullscreen, setUnityIsFullscreen] = useState(false);
+
   const handleEnterFullScreen = useCallback(() => {
     requestFullscreen(true);
-  }, [requestFullscreen]);
+    setUnityIsFullscreen(true);
+  }, [requestFullscreen, setUnityIsFullscreen]);
 
   useEffect(() => {
     addEventListener('EnterFullscreen', handleEnterFullScreen);
@@ -32,7 +36,8 @@ function UnityApp(props) {
 
   const handleExitFullScreen = useCallback(() => {
     requestFullscreen(false);
-  }, [requestFullscreen]);
+    setUnityIsFullscreen(false);
+  }, [requestFullscreen, setUnityIsFullscreen]);
 
   useEffect(() => {
     addEventListener('ExitFullscreen', handleExitFullScreen);
@@ -40,6 +45,22 @@ function UnityApp(props) {
       removeEventListener('ExitFullscreen', handleExitFullScreen);
     };
   }, [addEventListener, removeEventListener, handleExitFullScreen]);
+
+  // Handle when the Esc button is pressed from fullscreen mode
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    function onFullscreenChange() {
+      setIsFullscreen(Boolean(document.fullscreenElement));
+      if (isFullscreen === unityIsFullscreen) {
+        // console.log('Sending message to Unity');
+        sendMessage('Footer', 'HandleExitFullscreenFromBrowser');
+      }
+    }
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+    return () =>
+      document.removeEventListener('fullscreenchange', onFullscreenChange);
+  }, [setIsFullscreen, isFullscreen, unityIsFullscreen, sendMessage]);
 
   return (
     <div id='unity-app' className='unity-app'>

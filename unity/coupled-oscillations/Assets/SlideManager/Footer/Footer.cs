@@ -43,6 +43,14 @@ public class Footer : MonoBehaviour
 #endif
     }
 
+    // Special method called when the user exits fullscreen from Esc key from javascript
+    public void HandleExitFullscreenFromBrowser()
+    {
+        appIsFullscreen = false;
+        if (appState) appState.appIsFullscreen = appIsFullscreen;
+        SetButtonVisibility();
+    }
+
     public void SetButtonVisibility()
     {
         if (appIsFullscreen)

@@ -22,29 +22,29 @@ function UnityApp(props) {
 
   const [unityIsFullscreen, setUnityIsFullscreen] = useState(false);
 
-  const handleEnterFullScreen = useCallback(() => {
+  const handleEnterFullscreen = useCallback(() => {
     requestFullscreen(true);
     setUnityIsFullscreen(true);
   }, [requestFullscreen, setUnityIsFullscreen]);
 
   useEffect(() => {
-    addEventListener('EnterFullscreen', handleEnterFullScreen);
+    addEventListener('EnterFullscreen', handleEnterFullscreen);
     return () => {
-      removeEventListener('EnterFullscreen', handleEnterFullScreen);
+      removeEventListener('EnterFullscreen', handleEnterFullscreen);
     };
-  }, [addEventListener, removeEventListener, handleEnterFullScreen]);
+  }, [addEventListener, removeEventListener, handleEnterFullscreen]);
 
-  const handleExitFullScreen = useCallback(() => {
+  const handleExitFullscreen = useCallback(() => {
     requestFullscreen(false);
     setUnityIsFullscreen(false);
   }, [requestFullscreen, setUnityIsFullscreen]);
 
   useEffect(() => {
-    addEventListener('ExitFullscreen', handleExitFullScreen);
+    addEventListener('ExitFullscreen', handleExitFullscreen);
     return () => {
-      removeEventListener('ExitFullscreen', handleExitFullScreen);
+      removeEventListener('ExitFullscreen', handleExitFullscreen);
     };
-  }, [addEventListener, removeEventListener, handleExitFullScreen]);
+  }, [addEventListener, removeEventListener, handleExitFullscreen]);
 
   // Handle when the Esc button is pressed from fullscreen mode
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -70,7 +70,7 @@ function UnityApp(props) {
         </div>
       )}
       <Unity unityProvider={unityProvider} className='unity' />
-      {/* <button onClick={handleClickEnterFullscreen}>Full screen</button> */}
+      <button onClick={handleEnterFullscreen}>Full screen</button>
     </div>
   );
 }
